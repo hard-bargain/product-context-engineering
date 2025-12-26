@@ -93,7 +93,7 @@ I've successfully connected to the **PRD-Driven Context Engineering** repository
    - Can iterate backward, but can't skip stages
 
 4. **AI-First Design**
-   - Session protocols for agent handoffs
+   - Session protocols for agent handoffs ([CLAUDE.md Section 10](PRD-driven-context-engineering/CLAUDE.md#10-session-protocols))
    - Sub-minute context loading via IDs
    - Multi-agent collaboration patterns
    - Specialized agent briefs (AURA, APOLLO, etc.)
