@@ -214,6 +214,8 @@ AI sessions end (timeout, context limits, crashes). How does the next session re
 
 ### GHM Solution: EPIC Section 0 (Session State)
 
+> **📖 Full Implementation Guide:** For comprehensive session protocols including mandatory procedures, quality checklists, and validation criteria, see [CLAUDE.md Section 10: Session Protocols](PRD-driven-context-engineering/CLAUDE.md#10-session-protocols).
+
 Every active EPIC includes a **Section 0** at the top:
 
 ```markdown
@@ -247,6 +249,11 @@ Every active EPIC includes a **Section 0** at the top:
 2. **Session Start**: New agent reads Section 0 first
 3. **Context Continuity**: Agent knows exactly where to resume
 4. **Time Saved**: 2-3 minutes vs. re-scanning entire EPIC
+
+**Learn More:**
+- [CLAUDE.md Section 10](PRD-driven-context-engineering/CLAUDE.md#10-session-protocols) - Comprehensive session protocols
+- [Hook Templates](PRD-driven-context-engineering/templates/hooks/) - Enforcement via git hooks
+- [Session Validation](PRD-driven-context-engineering/tools/) - `validate_sessions.py` script
 
 ---
 
