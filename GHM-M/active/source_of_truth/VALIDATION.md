@@ -192,5 +192,85 @@ GHM-M successfully developed its own foundation using its own methodology. All c
 
 ---
 
-**Total Validations:** 1 in progress
+## VAL-001: AI Context Engineering Methodology Development
+
+**Validation Type:** Real-World Application / Domain Transfer
+**Status:** In Progress
+**Started:** 2025-12-26
+**Organization:** This Project (GHM-M Validation Phase)
+**EPIC:** [EPIC-02](../epics/EPIC-02-validation-ace.md)
+
+### Context
+Using GHM-M to develop a different methodology: **AI Context Engineering (ACE)** for cross-discipline product teams. Tests whether GHM-M patterns, templates, and workflows work for methodologies beyond self-development.
+
+**Target Methodology (ACE):**
+- **Purpose**: Enable cross-discipline teams (strategists, managers, marketers, designers, developers, testers) to effectively manage AI context throughout product development
+- **Scope**: Context structure, evolution, handoffs, and validation across product lifecycle phases
+- **Complexity**: Medium-high (multiple disciplines, phase alignment, AI-specific patterns)
+
+### Validation Objectives
+
+**Primary Questions:**
+1. Do GHM-M templates work for different methodology domains?
+2. Does the ID-based knowledge graph provide value in ACE context?
+3. Do session protocols enable development of complex, multi-faceted methodologies?
+4. Does progressive documentation (v0.1 → v0.4) work for ACE?
+5. What refinements does GHM-M need based on ACE development?
+
+**Success Criteria:**
+- [ ] ACE foundation (v0.4) created using GHM-M
+- [ ] At least 3 disciplines documented
+- [ ] 5+ core patterns defined
+- [ ] At least 3 GHM-M refinements identified
+- [ ] Effectiveness assessment completed
+
+### Methodology Application
+
+**GHM-M Patterns Being Tested:**
+- PAT-001: ID-based knowledge graph
+- PAT-002: Progressive documentation
+- PAT-003: Session protocols
+- COMP-001: 3+1+SoT+Temp stack
+- TEMP-002: MRD template for ACE
+
+**Expected Deliverables:**
+- ACE MRD (v0.1 → v0.4)
+- 4-5 practitioner journeys (different disciplines)
+- 5-7 context patterns
+- 2-3 workflows for context evolution
+- Getting started guide for ACE
+- Context templates
+
+### Results (In Progress)
+
+*To be documented as ACE development progresses*
+
+**Preliminary Observations:**
+- (To be filled during EPIC-02)
+
+### Patterns Validated
+
+*To be updated during EPIC-02*
+
+### Lessons Learned
+
+*To be documented as we develop ACE using GHM-M*
+
+### Evidence
+
+**EPIC Tracking:**
+- [EPIC-02](../epics/EPIC-02-validation-ace.md): Tracking all ACE development work
+- Session protocols maintained throughout
+- ID tracking in EPIC-02 Section 3A
+
+**Deliverables:**
+- (To be created during EPIC-02)
+
+### GHM-M Refinements Identified
+
+*To be documented based on ACE development experience*
+
+---
+
+**Total Validations:** 2 (1 complete, 1 in progress)
 **Last Updated:** 2025-12-26
