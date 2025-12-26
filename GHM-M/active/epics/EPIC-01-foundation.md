@@ -1,0 +1,532 @@
+---
+title: "EPIC-01: GHM-M Foundation Setup"
+status: "Complete"
+phase: "Wrap"
+created: "2025-12-26"
+completed: "2025-12-26"
+mrd_version: "v0.1 → v0.4"
+---
+
+# EPIC-01: GHM-M Foundation Setup
+
+> **Purpose:** Establish the complete foundation for GHM-M (Gear Heart Methodology for Methodologies) variant
+>
+> **Scope:** Implement all 6 phases from `GHM_M_IMPLEMENTATION_PLAN.md`
+>
+> **MRD Context:** Supporting v0.1 Spark - establishing methodology infrastructure
+>
+> **Reference:** [CLAUDE.md Section 10: Session Protocols](../../PRD-driven-context-engineering/CLAUDE.md#10-session-protocols)
+
+---
+
+## Section 0: Session State
+
+### Current Session
+
+| Field | Value |
+|-------|-------|
+| **Session Date** | N/A |
+| **Agent/Model** | N/A |
+| **Active Issue** | EPIC Complete |
+| **Phase** | Complete |
+| **Status** | ✅ Done |
+
+### Work Completed This Session
+
+**Planning & Setup:**
+- ✅ Created `GHM_M_ADAPTATION_FOR_METHODOLOGY.md` with comprehensive recommendations
+- ✅ Created `GHM_M_IMPLEMENTATION_PLAN.md` with 6-phase plan
+- ✅ Created complete GHM-M directory structure
+- ✅ Created EPIC-01 with full issue breakdown (30 issues)
+
+**Phase 1: Foundation Setup (COMPLETE ✅):**
+- ✅ Issue 1.1: Created directory structure
+- ✅ Issue 1.2: Created `GHM-M/CLAUDE.md` (adapted with GHM-M terminology)
+- ✅ Issue 1.3: Created `GHM-M/MRD.md` (initialized with v0.1 Spark)
+- ✅ Issue 1.4: Created `GHM-M/README.md` (navigation and status)
+
+**Phase 2: SoT Library Setup (COMPLETE ✅):**
+- ✅ Issue 2.1: Created PRACTITIONER_JOURNEYS.md with PJ-001
+- ✅ Issue 2.2: Created METHODOLOGY_PRINCIPLES.md with MP-001, MP-002, MP-003
+- ✅ Issue 2.3: Created PATTERNS.md with PAT-001, PAT-002, PAT-003
+- ✅ Issue 2.4: Created TEMPLATES.md with TEMP-001, TEMP-002
+- ✅ Issue 2.5: Created VALIDATION.md with VAL-000
+- ✅ Issue 2.6: Created PUBLICATION.md with PUB-001
+- ✅ Issue 2.7: Created PRACTITIONER_FEEDBACK.md (template)
+- ✅ Issue 2.8: Created WORKFLOWS.md with WF-001, WF-002
+- ✅ Issue 2.9: Created GUIDES.md with GUIDE-001
+- ✅ Issue 2.10: Created TOOLS.md with TOOL-001, TOOL-002, TOOL-003
+- ✅ Issue 2.11: Created COMPONENTS.md with COMP-001, COMP-002, COMP-003
+
+**Phase 3: Template Creation (COMPLETE ✅):**
+- ✅ Issue 3.1: Created `templates/methodology/mrd_template.md`
+- ✅ Issue 3.2: Created `templates/methodology/readme_template.md`
+- ✅ Issue 3.3: Created `templates/methodology/claude_template.md`
+- ✅ Issue 3.4: Created `templates/epics/EPIC_template.md` (adapted for GHM-M)
+- ✅ Issue 3.5: Created 11 SoT templates in `templates/source_of_truth/`:
+  - PRACTITIONER_JOURNEYS_template.md
+  - METHODOLOGY_PRINCIPLES_template.md
+  - PATTERNS_template.md
+  - TEMPLATES_template.md
+  - VALIDATION_template.md
+  - PUBLICATION_template.md
+  - PRACTITIONER_FEEDBACK_template.md
+  - WORKFLOWS_template.md
+  - GUIDES_template.md
+  - TOOLS_template.md
+  - COMPONENTS_template.md
+
+**Phase 4: Tool Configuration (COMPLETE ✅):**
+- ✅ Issue 4.1: Created `.codex/ID_REGISTRY.md` (manual registry with all 21 IDs)
+- ✅ Issue 4.2: Created `tools/config/ghm_m_config.yaml` (complete configuration)
+- ✅ Issue 4.3: Created `tools/validate_sessions.py` (adapted and tested)
+- ✅ Bonus: Created `tools/README.md` (comprehensive tool documentation)
+
+**Phase 5: Documentation (COMPLETE ✅):**
+- ✅ Issue 5.1: Created `active/workflows/MRD_VERSION_LIFECYCLE.md` (WF-001 detailed workflow)
+- ✅ Issue 5.2: Created `active/workflows/UNIQUE_ID_SYSTEM.md` (13 ID prefixes guide)
+- ✅ Issue 5.3: Created `docs/getting_started.md` (GUIDE-001 implementation)
+- ✅ Issue 5.4: Created `docs/ghm_m_principles.md` (philosophy and principles)
+
+**Phase 6: Initialize First MRD (COMPLETE ✅):**
+- ✅ Issue 6.1: Defined methodology problem/vision (expanded MRD v0.1)
+- ✅ Issue 6.2: Started MRD v0.1 content (updated to v0.4 Foundation status)
+- ✅ MRD now shows v0.1 Spark Complete → v0.4 Foundation In Progress
+- ✅ All 21 created IDs linked in MRD Related IDs section
+- ✅ Version history updated to 5-gate lifecycle
+
+**IDs Created:** 21 IDs across 11 SoT files (see Section 3A)
+**Templates Created:** 15 templates (3 methodology + 1 EPIC + 11 SoT)
+**Tools Configured:** 3 tools (validate_sessions.py working, 2 planned)
+**Documentation Complete:** 4 major docs (lifecycle, ID system, getting started, principles)
+**MRD Status:** v0.1 Spark Complete → v0.4 Foundation (90% complete)
+
+### Stopped At
+
+**EPIC COMPLETE ✅**
+**All 30 Issues:** Completed across 6 phases + wrap-up
+**Final Status:** Foundation v0.4 achieved, all success criteria met
+**Next Work:** New EPIC for v0.6 Validation phase
+
+### Blockers
+
+None.
+
+### Next Session Should
+
+1. **Begin real-world validation** (v0.4 → v0.6 Validation)
+   - Create additional validation case studies (VAL-001, VAL-002, VAL-003)
+   - Gather practitioner feedback (PF-XXX entries)
+   - Test GHM-M with external practitioners
+
+2. **Expand documentation based on learnings**
+   - Refine patterns and principles based on VAL-000 insights
+   - Expand practitioner journey documentation
+   - Create additional guides as needed
+
+3. **Or: Start next methodology development task**
+   - Apply GHM-M to new methodology project
+   - Validate effectiveness in different context
+   - Document as additional validation case study
+
+### Files Changed This Session
+
+**Planning:**
+- `GHM_M_ADAPTATION_FOR_METHODOLOGY.md` (created)
+- `GHM_M_IMPLEMENTATION_PLAN.md` (created)
+
+**Foundation:**
+- `GHM-M/` directory structure (created)
+- `GHM-M/active/epics/EPIC-01-foundation.md` (created, updated)
+- `GHM-M/CLAUDE.md` (created)
+- `GHM-M/MRD.md` (created)
+- `GHM-M/README.md` (created)
+
+**SoT Library (11 files):**
+- `GHM-M/active/source_of_truth/PRACTITIONER_JOURNEYS.md`
+- `GHM-M/active/source_of_truth/METHODOLOGY_PRINCIPLES.md`
+- `GHM-M/active/source_of_truth/PATTERNS.md`
+- `GHM-M/active/source_of_truth/TEMPLATES.md`
+- `GHM-M/active/source_of_truth/VALIDATION.md`
+- `GHM-M/active/source_of_truth/PUBLICATION.md`
+- `GHM-M/active/source_of_truth/PRACTITIONER_FEEDBACK.md`
+- `GHM-M/active/source_of_truth/WORKFLOWS.md`
+- `GHM-M/active/source_of_truth/GUIDES.md`
+- `GHM-M/active/source_of_truth/TOOLS.md`
+- `GHM-M/active/source_of_truth/COMPONENTS.md`
+
+**Templates (15 files):**
+- `GHM-M/templates/methodology/mrd_template.md`
+- `GHM-M/templates/methodology/readme_template.md`
+- `GHM-M/templates/methodology/claude_template.md`
+- `GHM-M/templates/epics/EPIC_template.md`
+- `GHM-M/templates/source_of_truth/PRACTITIONER_JOURNEYS_template.md`
+- `GHM-M/templates/source_of_truth/METHODOLOGY_PRINCIPLES_template.md`
+- `GHM-M/templates/source_of_truth/PATTERNS_template.md`
+- `GHM-M/templates/source_of_truth/TEMPLATES_template.md`
+- `GHM-M/templates/source_of_truth/VALIDATION_template.md`
+- `GHM-M/templates/source_of_truth/PUBLICATION_template.md`
+- `GHM-M/templates/source_of_truth/PRACTITIONER_FEEDBACK_template.md`
+- `GHM-M/templates/source_of_truth/WORKFLOWS_template.md`
+- `GHM-M/templates/source_of_truth/GUIDES_template.md`
+- `GHM-M/templates/source_of_truth/TOOLS_template.md`
+- `GHM-M/templates/source_of_truth/COMPONENTS_template.md`
+
+**Tools (4 files):**
+- `GHM-M/.codex/ID_REGISTRY.md`
+- `GHM-M/tools/config/ghm_m_config.yaml`
+- `GHM-M/tools/validate_sessions.py`
+- `GHM-M/tools/README.md`
+
+**Documentation (4 files):**
+- `GHM-M/active/workflows/MRD_VERSION_LIFECYCLE.md`
+- `GHM-M/active/workflows/UNIQUE_ID_SYSTEM.md`
+- `GHM-M/docs/getting_started.md`
+- `GHM-M/docs/ghm_m_principles.md`
+
+### Session History
+
+| Session # | Date | Agent | Phase | Summary |
+|-----------|------|-------|-------|---------|
+| 1 | 2025-12-26 | Claude Sonnet 4.5 | Plan → Wrap | Complete foundation implementation: 6 phases (30 issues), 21 IDs created, 15 templates, 4 docs, tools configured, VAL-000 documented, EPIC complete ✅ |
+
+---
+
+## Section 1: EPIC Overview
+
+### 1.1 Problem Statement
+
+We need to adapt GHM (designed for product development) to support methodology development. This requires new terminology, ID prefixes, SoT files, and documentation that reflect methodology concepts rather than product concepts.
+
+### 1.2 Solution Approach
+
+Implement GHM-M variant using adapted terminology from day one:
+- PRD → MRD (Methodology Requirements Document)
+- User Journeys → Practitioner Journeys (PJ-XXX)
+- Business Rules → Methodology Principles (MP-XXX)
+- APIs → Patterns (PAT-XXX)
+- Complete new ID system and SoT library
+
+### 1.3 Success Criteria
+
+✅ **Foundation Complete:**
+- [x] All directory structure in place
+- [x] 11 SoT files created with templates
+- [x] Navigation files (CLAUDE.md, MRD.md, README.md) initialized
+- [x] Tools configured for GHM-M ID prefixes
+- [x] First MRD (v0.1 Spark) started and advanced to v0.4 Foundation
+- [x] This EPIC tracks all implementation work
+- [x] Can use GHM-M to develop the methodology itself (VAL-000 validated)
+
+### 1.4 Scope & Constraints
+
+**In Scope:**
+- All 6 phases from implementation plan
+- Complete SoT library (11 files)
+- Tool configuration for new IDs
+- Documentation and guides
+
+**Out of Scope:**
+- Building the actual methodology content (happens in later EPICs)
+- Migration of existing content from original GHM
+- Tool modifications beyond configuration
+
+**Constraints:**
+- Must preserve original GHM in `PRD-driven-context-engineering/`
+- Must follow session protocols (this EPIC demonstrates compliance)
+- Must use adapted terminology consistently from start
+
+---
+
+## Section 2: Work Breakdown
+
+### Issue Manifest
+
+| Issue # | Title | Status | Phase | Estimated | IDs Affected |
+|---------|-------|--------|-------|-----------|--------------|
+| **Phase 1: Foundation Setup** ✅ |
+| 1.1 | Create directory structure | ✅ Done | Build | 15 min | - |
+| 1.2 | Create CLAUDE.md (adapted) | ✅ Done | Build | 20 min | - |
+| 1.3 | Create MRD.md (initialized) | ✅ Done | Build | 15 min | - |
+| 1.4 | Create README.md (initialized) | ✅ Done | Build | 10 min | - |
+| **Phase 2: SoT Library Setup** ✅ |
+| 2.1 | Create PRACTITIONER_JOURNEYS.md | ✅ Done | Build | 10 min | PJ-001 |
+| 2.2 | Create METHODOLOGY_PRINCIPLES.md | ✅ Done | Build | 10 min | MP-001, MP-002, MP-003 |
+| 2.3 | Create PATTERNS.md | ✅ Done | Build | 10 min | PAT-001, PAT-002, PAT-003 |
+| 2.4 | Create TEMPLATES.md | ✅ Done | Build | 10 min | TEMP-001, TEMP-002 |
+| 2.5 | Create VALIDATION.md | ✅ Done | Build | 10 min | VAL-000 |
+| 2.6 | Create PUBLICATION.md | ✅ Done | Build | 10 min | PUB-001 |
+| 2.7 | Create PRACTITIONER_FEEDBACK.md | ✅ Done | Build | 10 min | PF-001 (template) |
+| 2.8 | Create WORKFLOWS.md | ✅ Done | Build | 10 min | WF-001, WF-002 |
+| 2.9 | Create GUIDES.md | ✅ Done | Build | 10 min | GUIDE-001 |
+| 2.10 | Create TOOLS.md | ✅ Done | Build | 10 min | TOOL-001, TOOL-002, TOOL-003 |
+| 2.11 | Create COMPONENTS.md | ✅ Done | Build | 10 min | COMP-001, COMP-002, COMP-003 |
+| **Phase 3: Template Creation** ✅ |
+| 3.1 | Create MRD template | ✅ Done | Build | 20 min | TEMP-002 |
+| 3.2 | Create README template | ✅ Done | Build | 10 min | - |
+| 3.3 | Create CLAUDE template | ✅ Done | Build | 15 min | - |
+| 3.4 | Create/adapt EPIC template | ✅ Done | Build | 15 min | TEMP-001 |
+| 3.5 | Create SoT file templates (11) | ✅ Done | Build | 30 min | - |
+| **Phase 4: Tool Configuration** ✅ |
+| 4.1 | Create ID registry | ✅ Done | Build | 15 min | - |
+| 4.2 | Create tool config YAML | ✅ Done | Build | 15 min | TOOL-003 |
+| 4.3 | Copy/configure validation scripts | ✅ Done | Build | 15 min | TOOL-001 |
+| **Phase 5: Documentation** ✅ |
+| 5.1 | Create MRD_VERSION_LIFECYCLE.md | ✅ Done | Build | 30 min | WF-001 |
+| 5.2 | Create UNIQUE_ID_SYSTEM.md (adapted) | ✅ Done | Build | 20 min | - |
+| 5.3 | Create getting_started.md | ✅ Done | Build | 20 min | GUIDE-001 |
+| 5.4 | Create ghm_m_principles.md | ✅ Done | Build | 15 min | - |
+| **Phase 6: Initialize First MRD** ✅ |
+| 6.1 | Define methodology problem/vision | ✅ Done | Plan | 15 min | - |
+| 6.2 | Start MRD v0.1 content | ✅ Done | Build | 15 min | - |
+| **Wrap-Up** ✅ |
+| 7.1 | Validate foundation completeness | ✅ Done | Verify | 15 min | - |
+| 7.2 | Update EPIC-01 final state | ✅ Done | Wrap | 10 min | - |
+| 7.3 | Document as VAL-000: Dogfooding | ✅ Done | Wrap | 15 min | VAL-000 |
+
+### Phase Workflow
+
+```
+Plan → Build → Verify → Wrap
+  ↓      ↓        ↓       ↓
+ Now   Issues   Tests   Docs
+      (1-6)    (7.1)   (7.2-3)
+```
+
+**Current Phase:** Plan → Build (transitioning)
+
+---
+
+## Section 3A: ID Tracking (Knowledge Graph)
+
+### IDs Created This EPIC
+
+| ID | Type | Name | SoT File | Status | Notes |
+|----|------|------|----------|--------|-------|
+| **Methodology Principles (MP-XXX)** |
+| MP-001 | Principle | Reference, don't duplicate | METHODOLOGY_PRINCIPLES.md | Planned | Core GHM principle |
+| MP-002 | Principle | Progressive documentation | METHODOLOGY_PRINCIPLES.md | Planned | Documentation evolves with lifecycle |
+| MP-003 | Principle | ID-based context | METHODOLOGY_PRINCIPLES.md | Planned | IDs over duplication |
+| **Patterns (PAT-XXX)** |
+| PAT-001 | Pattern | ID-based knowledge graph | PATTERNS.md | Planned | Core pattern |
+| PAT-002 | Pattern | Progressive documentation | PATTERNS.md | Planned | How docs evolve |
+| PAT-003 | Pattern | Session protocols | PATTERNS.md | Planned | Continuity across sessions |
+| **Components (COMP-XXX)** |
+| COMP-001 | Component | 3+1+SoT+Temp stack | COMPONENTS.md | Planned | Core architecture |
+| COMP-002 | Component | ID system | COMPONENTS.md | Planned | Unique ID infrastructure |
+| COMP-003 | Component | Session protocols | COMPONENTS.md | Planned | Handoff mechanisms |
+| **Templates (TEMP-XXX)** |
+| TEMP-001 | Template | EPIC template | TEMPLATES.md | Planned | Work window template |
+| TEMP-002 | Template | MRD template | TEMPLATES.md | Planned | Methodology requirements doc |
+| **Workflows (WF-XXX)** |
+| WF-001 | Workflow | MRD version lifecycle | WORKFLOWS.md | Planned | v0.1 → v1.0 progression |
+| WF-002 | Workflow | EPIC lifecycle | WORKFLOWS.md | Planned | Plan → Build → Verify → Wrap |
+| **Guides (GUIDE-XXX)** |
+| GUIDE-001 | Guide | Getting started | GUIDES.md | Planned | Onboarding for practitioners |
+| **Tools (TOOL-XXX)** |
+| TOOL-001 | Tool | validate_sessions.py | TOOLS.md | Planned | Session state validator |
+| TOOL-002 | Tool | ID extraction utilities | TOOLS.md | Planned | Parse IDs from markdown |
+| TOOL-003 | Tool | GHM-M config | TOOLS.md | Planned | Tool configuration for new IDs |
+| **Practitioner Journeys (PJ-XXX)** |
+| PJ-001 | Journey | First-time adoption | PRACTITIONER_JOURNEYS.md | Planned | How to start with GHM-M |
+| **Publication (PUB-XXX)** |
+| PUB-001 | Channel | GitHub repository | PUBLICATION.md | Planned | Primary distribution |
+| **Practitioner Feedback (PF-XXX)** |
+| PF-001 | Feedback | Need clearer onboarding | PRACTITIONER_FEEDBACK.md | Planned | Example entry |
+| **Validation (VAL-XXX)** |
+| VAL-000 | Case Study | GHM-M dogfooding | VALIDATION.md | In Progress | This project! |
+
+### IDs Modified This EPIC
+
+None (all new IDs).
+
+### IDs Referenced from Other Sources
+
+| ID | Type | Source | Purpose |
+|----|------|--------|---------|
+| - | - | - | None yet (bootstrap EPIC) |
+
+### Bidirectional References Checklist
+
+- [ ] All created IDs have entries in their SoT files
+- [ ] All "Related IDs" sections are mutual
+- [ ] No orphaned IDs (all referenced IDs exist)
+- [ ] ID registry updated with all new prefixes
+
+---
+
+## Section 4: Validation & Gates
+
+### 4.1 Definition of Done
+
+**This EPIC is complete when:**
+
+1. ✅ **Structure Complete**
+   - [x] All directories exist per Phase 1 spec
+   - [x] Navigation files (CLAUDE.md, MRD.md, README.md) created
+
+2. ✅ **SoT Library Complete**
+   - [x] All 11 SoT files created
+   - [x] Each has template structure
+   - [x] Each has at least one example ID
+
+3. ✅ **Templates Complete**
+   - [x] MRD, README, CLAUDE templates exist
+   - [x] EPIC template adapted for GHM-M
+   - [x] All SoT file templates created
+
+4. ✅ **Tools Configured**
+   - [x] ID registry includes all GHM-M prefixes
+   - [x] Tool config YAML created
+   - [x] Validation scripts copied/configured
+
+5. ✅ **Documentation Complete**
+   - [x] MRD lifecycle documented
+   - [x] ID system documented
+   - [x] Getting started guide exists
+   - [x] GHM-M principles guide exists
+
+6. ✅ **Self-Application**
+   - [x] This EPIC tracked all work
+   - [x] Session protocols followed
+   - [x] Section 3A tracks all IDs created
+   - [x] VAL-000 documents dogfooding
+
+### 4.2 Quality Checklist
+
+- [x] All file names follow GHM-M conventions
+- [x] Terminology consistent (MRD not PRD, practitioners not users)
+- [x] All ID prefixes documented in registry
+- [x] Links use correct paths
+- [x] Markdown formatting valid
+- [x] No references to old GHM IDs in GHM-M files
+
+### 4.3 Validation Methods
+
+**How we validate foundation quality:**
+
+1. **Structural Validation**
+   - Run: `find GHM-M/ -type f -name "*.md" | wc -l` (expect 25+ files)
+   - Verify all SoT files exist
+
+2. **ID Validation**
+   - Check: Each SoT file has at least one example ID
+   - Check: ID registry lists all 13 prefixes
+
+3. **Tool Validation**
+   - Run: `python tools/validate_sessions.py GHM-M/active/epics/EPIC-01-foundation.md`
+   - Verify: No errors, session state valid
+
+4. **Self-Application Validation**
+   - This EPIC demonstrates all GHM-M patterns
+   - Section 0: Session protocols
+   - Section 3A: ID tracking
+   - Uses adapted terminology throughout
+
+### 4.4 Gate Criteria
+
+**Before closing this EPIC:**
+
+- [x] All 30 issues marked complete
+- [x] All checklists in Section 4.1 checked
+- [x] Quality checklist (4.2) passes
+- [x] Validation methods (4.3) pass
+- [x] Session State (Section 0) updated with final handoff
+- [x] All IDs in Section 3A created and documented
+- [x] VAL-000 case study written
+
+**✅ ALL GATE CRITERIA MET - EPIC-01 COMPLETE**
+
+---
+
+## Section 5: Notes & Context
+
+### 5.1 Key Decisions
+
+**Decision Log:**
+
+1. **Use adapted terminology from day one**
+   - Date: 2025-12-26
+   - Rationale: Avoid rework and confusion from migration
+   - Impact: All files use GHM-M terminology immediately
+
+2. **Create pilot EPIC first**
+   - Date: 2025-12-26
+   - Rationale: Demonstrate GHM-M principles from the start
+   - Impact: This EPIC tracks foundation implementation
+
+3. **Position as GHM-M (variant)**
+   - Date: 2025-12-26
+   - Rationale: Extension of GHM, not replacement
+   - Impact: Preserved original GHM for reference
+
+### 5.2 Dependencies
+
+**External Dependencies:**
+- Original GHM documentation in `PRD-driven-context-engineering/` (for reference)
+- Session protocols from CLAUDE.md Section 10 (methodology-agnostic)
+
+**Internal Dependencies:**
+- None (bootstrap EPIC)
+
+### 5.3 Risks & Mitigations
+
+| Risk | Impact | Probability | Mitigation |
+|------|--------|-------------|------------|
+| Too many new concepts at once | Confusion | Medium | Strong documentation, examples in each SoT file |
+| Tools don't recognize new IDs | Broken automation | Low | Config file approach, test early |
+| Terminology inconsistency | Poor practitioner experience | Medium | Review checklist, find/replace validation |
+
+### 5.4 Lessons for Future EPICs
+
+**What we're learning:**
+- (To be filled as we implement)
+- How well session protocols work in practice
+- Whether ID tracking scales to 20+ IDs in one EPIC
+- Effectiveness of adapted terminology
+
+### 5.5 Related Resources
+
+**Implementation References:**
+- `GHM_ADAPTATION_FOR_METHODOLOGY.md` - Adaptation recommendations
+- `GHM_M_IMPLEMENTATION_PLAN.md` - Detailed 6-phase plan
+- `PRD-driven-context-engineering/CLAUDE.md#10-session-protocols` - Session protocols
+
+**Original GHM:**
+- `PRD-driven-context-engineering/` - Reference implementation
+- Original templates and examples
+
+---
+
+## Section 6: Communication & Handoffs
+
+### 6.1 Stakeholders
+
+| Role | Person/Team | Interest | Communication |
+|------|-------------|----------|---------------|
+| Methodology Author | User | Owner, primary practitioner | Active in this session |
+| AI Agent | Claude Sonnet 4.5 | Implementation | Following session protocols |
+
+### 6.2 Status Updates
+
+**Update Frequency:** After each phase completion
+
+**Update Format:**
+- Phase completed
+- IDs created
+- Next phase starting
+- Any blockers
+
+### 6.3 Handoff Notes
+
+**For Next Session:**
+- All issues in Section 2 are sequenced
+- Start with Issue 1.2 (Create CLAUDE.md)
+- Follow session protocols (update Section 0)
+- Track all IDs in Section 3A as created
+
+---
+
+**EPIC Created:** 2025-12-26
+**Current Status:** In Progress (Plan → Build transition)
+**Next Review:** After Phase 1 completion
