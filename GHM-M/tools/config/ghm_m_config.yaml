@@ -1,0 +1,301 @@
+# GHM-M (Methodologies) Configuration
+version: 1.0-M
+variant: GHM-M
+purpose: Configuration for GHM-M tools and automation
+
+# ID extraction patterns (regex)
+# GHM-M uses methodology-specific ID prefixes instead of product prefixes
+id_patterns:
+  practitioner_journeys: 'PJ-\d{3}'
+  methodology_principles: 'MP-\d{3}'
+  patterns: 'PAT-\d{3}'
+  templates: 'TEMP-\d{3}'
+  validation: 'VAL-\d{3}'
+  publication: 'PUB-\d{3}'
+  practitioner_feedback: 'PF-\d{3}'
+  workflows: 'WF-\d{3}'
+  guides: 'GUIDE-\d{3}'
+  tools: 'TOOL-\d{3}'
+  components: 'COMP-\d{3}'
+
+# ID metadata mapping
+id_metadata:
+  PJ:
+    name: "Practitioner Journeys"
+    file: "PRACTITIONER_JOURNEYS.md"
+    description: "How practitioners discover, adopt, and apply the methodology"
+    color: '#9b59b6'  # Purple
+  MP:
+    name: "Methodology Principles"
+    file: "METHODOLOGY_PRINCIPLES.md"
+    description: "Core principles governing the methodology"
+    color: '#3498db'  # Blue
+  PAT:
+    name: "Patterns"
+    file: "PATTERNS.md"
+    description: "Reusable methodology patterns"
+    color: '#2ecc71'  # Green
+  TEMP:
+    name: "Templates"
+    file: "TEMPLATES.md"
+    description: "Document templates and structural patterns"
+    color: '#f39c12'  # Orange
+  VAL:
+    name: "Validation"
+    file: "VALIDATION.md"
+    description: "Validation approaches, case studies, and evidence"
+    color: '#e74c3c'  # Red
+  PUB:
+    name: "Publication"
+    file: "PUBLICATION.md"
+    description: "Distribution channels and publication strategies"
+    color: '#1abc9c'  # Teal
+  PF:
+    name: "Practitioner Feedback"
+    file: "PRACTITIONER_FEEDBACK.md"
+    description: "Feedback from methodology practitioners"
+    color: '#e67e22'  # Dark orange
+  WF:
+    name: "Workflows"
+    file: "WORKFLOWS.md"
+    description: "Document workflows and processes"
+    color: '#34495e'  # Gray
+  GUIDE:
+    name: "Guides"
+    file: "GUIDES.md"
+    description: "How-to guides and tutorials"
+    color: '#16a085'  # Dark teal
+  TOOL:
+    name: "Tools"
+    file: "TOOLS.md"
+    description: "Automation tools and scripts"
+    color: '#f1c40f'  # Yellow
+  COMP:
+    name: "Components"
+    file: "COMPONENTS.md"
+    description: "Core methodology components"
+    color: '#c0392b'  # Dark red
+
+# File patterns for SoT parsing
+sot_files:
+  - 'active/source_of_truth/PRACTITIONER_JOURNEYS.md'
+  - 'active/source_of_truth/METHODOLOGY_PRINCIPLES.md'
+  - 'active/source_of_truth/PATTERNS.md'
+  - 'active/source_of_truth/TEMPLATES.md'
+  - 'active/source_of_truth/VALIDATION.md'
+  - 'active/source_of_truth/PUBLICATION.md'
+  - 'active/source_of_truth/PRACTITIONER_FEEDBACK.md'
+  - 'active/source_of_truth/WORKFLOWS.md'
+  - 'active/source_of_truth/GUIDES.md'
+  - 'active/source_of_truth/TOOLS.md'
+  - 'active/source_of_truth/COMPONENTS.md'
+
+# Navigation files (3+1 stack)
+navigation_files:
+  - 'README.md'
+  - 'MRD.md'
+  - 'CLAUDE.md'
+  epic_pattern: 'active/epics/EPIC-*.md'
+
+# Template files
+template_files:
+  methodology:
+    - 'templates/methodology/mrd_template.md'
+    - 'templates/methodology/readme_template.md'
+    - 'templates/methodology/claude_template.md'
+  epics:
+    - 'templates/epics/EPIC_template.md'
+  source_of_truth:
+    - 'templates/source_of_truth/PRACTITIONER_JOURNEYS_template.md'
+    - 'templates/source_of_truth/METHODOLOGY_PRINCIPLES_template.md'
+    - 'templates/source_of_truth/PATTERNS_template.md'
+    - 'templates/source_of_truth/TEMPLATES_template.md'
+    - 'templates/source_of_truth/VALIDATION_template.md'
+    - 'templates/source_of_truth/PUBLICATION_template.md'
+    - 'templates/source_of_truth/PRACTITIONER_FEEDBACK_template.md'
+    - 'templates/source_of_truth/WORKFLOWS_template.md'
+    - 'templates/source_of_truth/GUIDES_template.md'
+    - 'templates/source_of_truth/TOOLS_template.md'
+    - 'templates/source_of_truth/COMPONENTS_template.md'
+
+# Graph styling for visualizations
+graph:
+  node_colors:  # Uses ID metadata colors
+    PJ: '#9b59b6'
+    MP: '#3498db'
+    PAT: '#2ecc71'
+    TEMP: '#f39c12'
+    VAL: '#e74c3c'
+    PUB: '#1abc9c'
+    PF: '#e67e22'
+    WF: '#34495e'
+    GUIDE: '#16a085'
+    TOOL: '#f1c40f'
+    COMP: '#c0392b'
+  layout: 'dot'     # Graphviz layout engine
+  format: 'svg'     # Output format
+  rankdir: 'LR'     # Graph direction (left-right)
+
+# Lifecycle gates (parsed from workflows/MRD_VERSION_LIFECYCLE.md)
+lifecycle:
+  auto_parse: true
+  gates_file: 'active/workflows/MRD_VERSION_LIFECYCLE.md'
+  gates:
+    - 'v0.1 Spark'
+    - 'v0.4 Foundation'
+    - 'v0.6 Validation'
+    - 'v0.8 Polish'
+    - 'v1.0 Launch'
+
+# Temp file lifecycle
+temp:
+  directory: 'temp/'
+  age_thresholds:
+    fresh: 7    # days
+    aging: 14   # days
+    # anything >14 days is considered stale
+
+# Session protocols validation
+session_protocols:
+  required_sections:
+    - 'Session State'
+    - 'Work Completed This Session'
+    - 'Stopped At'
+    - 'Next Session Should'
+    - 'Files Changed This Session'
+  epic_section: '## 0. Session State'
+  validation_tool: 'tools/validate_sessions.py'
+
+# ID validation rules
+id_validation:
+  format: '^[A-Z]+(-[A-Z]+)*-\d{3}$'  # PREFIX-000 or PREFIX-WORD-000
+  unique_across_files: true
+  require_definition: true  # Every ID must have a definition (## ID-XXX header)
+  require_description: true
+  allow_forward_references: false  # Referenced IDs must already exist
+
+# Registry settings
+registry:
+  file: '.codex/ID_REGISTRY.md'
+  auto_generate: false  # Manual until TOOL-002 is implemented
+  include_cross_references: true
+  include_usage_count: true
+  sort_by: 'prefix'  # or 'creation_date', 'usage_count'
+
+# Privacy settings
+privacy:
+  strip_emails: true
+  strip_usernames: false
+
+# Attribution
+attribution:
+  enabled: true
+  variant: "GHM-M"
+  base: "GHM (Gear Heart Methodology)"
+  credit: "Adapted for methodology development"
+
+# Output settings
+output:
+  directory: 'docs/generated'
+  deterministic: true  # Sort IDs for consistent output
+  include_provenance: true
+  timestamp_format: '%Y-%m-%d %H:%M:%S'
+
+# Tool-specific settings
+tools:
+  validate_sessions:
+    strict_mode: true
+    require_all_sections: true
+    warn_on_stale_state: true
+    stale_threshold_hours: 48
+
+  sync_registry:
+    scan_paths:
+      - 'active/source_of_truth/'
+    output: '.codex/ID_REGISTRY.md'
+    include_templates: false
+    include_archived: false
+
+  check_links:
+    validate_bidirectional: true
+    report_orphans: true
+    report_dangling: true
+    fail_on_broken: true
+
+  find_orphans:
+    exclude_templates: true
+    exclude_planned: false  # Include IDs marked as "Planned"
+    report_format: 'markdown'
+
+# Paths (relative to GHM-M root)
+paths:
+  root: '.'
+  active: 'active'
+  source_of_truth: 'active/source_of_truth'
+  epics: 'active/epics'
+  templates: 'templates'
+  workflows: 'active/workflows'
+  tools: 'tools'
+  docs: 'docs'
+  temp: 'temp'
+  archive: 'archive'
+  codex: '.codex'
+
+---
+
+# Configuration Notes
+
+## Version History
+- v1.0-M (2025-12-26): Initial GHM-M configuration created during EPIC-01 Phase 4
+
+## Differences from Standard GHM
+
+**ID Prefixes:**
+- Product IDs (UJ, BR, API, DBT, TEST, DEP, CFD, DES, SEC, PERF) replaced with
+- Methodology IDs (PJ, MP, PAT, TEMP, VAL, PUB, PF, WF, GUIDE, TOOL, COMP)
+
+**File Structure:**
+- `PRD.md` → `MRD.md`
+- Product-focused SoT files → Methodology-focused SoT files
+- `workflows/PRD_VERSION_LIFECYCLE.md` → `workflows/MRD_VERSION_LIFECYCLE.md`
+
+**Terminology:**
+- Users → Practitioners
+- Business Rules → Methodology Principles
+- API Contracts → Patterns
+- Database Schema → Templates
+- Test Cases → Validation / Case Studies
+- Customer Feedback → Practitioner Feedback
+
+## Tool Configuration Reference
+
+This configuration file is referenced by:
+- **TOOL-001** (validate_sessions.py): Session protocol validation
+- **TOOL-002** (ID extraction utilities): Registry generation and link checking
+- **TOOL-003** (This file): Central configuration
+
+## Usage
+
+Tools should load this configuration at runtime:
+
+```python
+import yaml
+
+with open('tools/config/ghm_m_config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+# Access configuration
+id_patterns = config['id_patterns']
+sot_files = config['sot_files']
+```
+
+## Validation
+
+To validate this configuration:
+```bash
+# Check YAML syntax
+python -c "import yaml; yaml.safe_load(open('tools/config/ghm_m_config.yaml'))"
+
+# Verify file paths exist
+python tools/validate_config.py
+```
