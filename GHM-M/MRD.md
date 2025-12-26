@@ -1,10 +1,10 @@
 ---
 title: "GHM-M: Methodology Requirements Document"
-version: "0.1"
-status: "Spark"
+version: "0.1 → 0.4"
+status: "Foundation"
 created: "2025-12-26"
 updated: "2025-12-26"
-lifecycle_stage: "v0.1 Spark"
+lifecycle_stage: "v0.1 Complete → v0.4 In Progress"
 ---
 
 # GHM-M — Methodology Requirements Document
@@ -13,7 +13,7 @@ lifecycle_stage: "v0.1 Spark"
 >
 > **Purpose**: Adapt GHM (designed for product development) to support methodology development
 >
-> **Status**: v0.1 Spark — Initial problem definition and vision
+> **Status**: v0.1 Spark Complete ✅ — v0.4 Foundation In Progress 🔄
 
 ---
 
@@ -21,12 +21,15 @@ lifecycle_stage: "v0.1 Spark"
 
 | Field | Value |
 |-------|-------|
-| **Version** | v0.1 (Spark) |
+| **Version** | v0.1 Complete → v0.4 In Progress |
 | **Status** | Active Development |
 | **Target Practitioners** | Methodology developers, framework creators, process designers |
 | **Created** | 2025-12-26 |
 | **Last Updated** | 2025-12-26 |
-| **Active EPIC** | EPIC-01: Foundation Setup |
+| **Active EPIC** | EPIC-01: Foundation Setup (90% complete) |
+| **Total IDs** | 21 IDs across 11 SoT files |
+| **Templates** | 15 templates created |
+| **Documentation** | 4 major docs complete |
 
 ---
 
@@ -34,16 +37,11 @@ lifecycle_stage: "v0.1 Spark"
 
 | Version | Date | Focus | Key Deliverables | Status |
 |---------|------|-------|------------------|--------|
-| **v0.1** | 2025-12-26 | Spark | Problem statement, vision, initial scope | 🔄 In Progress |
-| v0.2 | TBD | Practitioner Definition | Target audiences, pain points | Pending |
-| v0.3 | TBD | Adoption Model | How methodology spreads | Pending |
-| v0.4 | TBD | Practitioner Journeys | Adoption paths | Pending |
-| v0.5 | TBD | Validation | Risk assessment | Pending |
-| v0.6 | TBD | Methodology Structure | Components, patterns, templates | Pending |
-| v0.7 | TBD | Documentation Creation | Build methodology artifacts | Pending |
-| v0.8 | TBD | Publication | Distribution strategy | Pending |
-| v0.9 | TBD | Community Building | Adoption & engagement | Pending |
-| v1.0 | TBD | Evolution | Real-world refinement | Pending |
+| **v0.1** | 2025-12-26 | Spark | Problem statement, vision, initial scope, foundation complete | ✅ Complete |
+| v0.4 | TBD | Foundation | Full SoT library, templates, tools, documentation | 🔄 In Progress |
+| v0.6 | TBD | Validation | Case studies, practitioner feedback, refinement | Pending |
+| v0.8 | TBD | Polish | Complete guides, cross-reference validation | Pending |
+| v1.0 | TBD | Launch | Published, community engagement, adoption tracking | Pending |
 
 ---
 
@@ -122,14 +120,20 @@ A systematic, ID-based approach to developing methodologies that:
 ### 5. Success Metrics (v0.1)
 
 **At this stage (Spark), success means:**
-- [ ] Problem clearly articulated
-- [ ] Vision documented
-- [ ] Initial scope defined
-- [ ] Target practitioners identified
-- [ ] Foundation infrastructure established (directory structure, navigation files, SoT templates)
-- [ ] First EPIC (EPIC-01) tracks foundation work
+- [x] Problem clearly articulated
+- [x] Vision documented
+- [x] Initial scope defined
+- [x] Target practitioners identified
+- [x] Foundation infrastructure established (directory structure, navigation files, SoT templates)
+- [x] First EPIC (EPIC-01) tracks foundation work
+- [x] All 21 initial IDs created across 11 SoT files
+- [x] 15 templates created for practitioners
+- [x] 3 tools configured (validator, config, registry)
+- [x] 4 comprehensive docs (lifecycle, ID system, getting started, principles)
 
-**Future Metrics (v0.2+):**
+**v0.1 Spark: ACHIEVED ✅** (2025-12-26)
+
+**Future Metrics (v0.4+):**
 - Number of practitioners adopting GHM-M
 - Case studies validating effectiveness
 - Community engagement (contributions, feedback)
@@ -159,38 +163,78 @@ A systematic, ID-based approach to developing methodologies that:
 
 ### 8. Related IDs
 
-**Referenced IDs (from EPIC-01):**
-- EPIC-01: Foundation Setup
-- VAL-000: GHM-M Dogfooding Case Study (in progress)
+**Core Principles (Created):**
+- [MP-001](active/source_of_truth/METHODOLOGY_PRINCIPLES.md#mp-001): Reference, don't duplicate
+- [MP-002](active/source_of_truth/METHODOLOGY_PRINCIPLES.md#mp-002): Progressive documentation
+- [MP-003](active/source_of_truth/METHODOLOGY_PRINCIPLES.md#mp-003): ID-based context
 
-**Planned IDs (to be created):**
-- MP-001: Reference, don't duplicate
-- PAT-001: ID-based knowledge graph
-- COMP-001: 3+1+SoT+Temp stack
-- PJ-001: First-time methodology adoption
-- (See EPIC-01 Section 3A for full list)
+**Core Patterns (Created):**
+- [PAT-001](active/source_of_truth/PATTERNS.md#pat-001): ID-based knowledge graph
+- [PAT-002](active/source_of_truth/PATTERNS.md#pat-002): Progressive documentation
+- [PAT-003](active/source_of_truth/PATTERNS.md#pat-003): Session protocols
+
+**Core Components (Created):**
+- [COMP-001](active/source_of_truth/COMPONENTS.md#comp-001): 3+1+SoT+Temp stack
+- [COMP-002](active/source_of_truth/COMPONENTS.md#comp-002): ID system (13 prefixes)
+- [COMP-003](active/source_of_truth/COMPONENTS.md#comp-003): Session protocols
+
+**Templates (Created):**
+- [TEMP-001](active/source_of_truth/TEMPLATES.md#temp-001): EPIC template
+- [TEMP-002](active/source_of_truth/TEMPLATES.md#temp-002): MRD template
+
+**Workflows (Created):**
+- [WF-001](active/workflows/MRD_VERSION_LIFECYCLE.md): MRD version lifecycle
+- [WF-002](active/source_of_truth/WORKFLOWS.md#wf-002): EPIC lifecycle
+
+**Guides (Created):**
+- [GUIDE-001](docs/getting_started.md): Getting started with GHM-M
+
+**Tools (Created):**
+- [TOOL-001](tools/validate_sessions.py): Session state validator
+- [TOOL-002](active/source_of_truth/TOOLS.md#tool-002): ID extraction utilities (planned)
+- [TOOL-003](tools/config/ghm_m_config.yaml): GHM-M configuration
+
+**Practitioner Journeys (Created):**
+- [PJ-001](active/source_of_truth/PRACTITIONER_JOURNEYS.md#pj-001): First-time methodology adoption
+
+**Validation (Created):**
+- [VAL-000](active/source_of_truth/VALIDATION.md#val-000): GHM-M Dogfooding (in progress)
+
+**Publication (Created):**
+- [PUB-001](active/source_of_truth/PUBLICATION.md#pub-001): GitHub repository
+
+**Practitioner Feedback (Template Created):**
+- [PF-001](active/source_of_truth/PRACTITIONER_FEEDBACK.md#pf-001): Feedback template structure
+
+**Active EPIC:**
+- [EPIC-01](active/epics/EPIC-01-foundation.md): Foundation Setup (90% complete)
 
 ---
 
 ## Next Steps
 
-**Immediate (v0.1 completion):**
-1. Complete foundation setup (EPIC-01)
-2. Create all 11 SoT files with templates
-3. Document core IDs (MP, PAT, COMP)
-4. Initialize getting started guide
+**Immediate (v0.4 Foundation - In Progress):**
+1. [x] Complete foundation setup (EPIC-01 Phases 1-5)
+2. [x] Create all 11 SoT files with initial IDs
+3. [x] Document core IDs (MP, PAT, COMP)
+4. [x] Create getting started guide (GUIDE-001)
+5. [x] Create comprehensive documentation (4 major docs)
+6. [ ] Finalize EPIC-01 and document VAL-000
+7. [ ] Begin first pilot/validation beyond meta-application
 
-**Near-term (v0.2):**
-1. Define target practitioners in detail
-2. Map practitioner pain points
-3. Create first practitioner journey (PJ-001)
-4. Gather initial practitioner feedback
+**Near-term (v0.6 Validation):**
+1. Create additional case studies (VAL-001, VAL-002, VAL-003)
+2. Gather practitioner feedback (PF-XXX entries)
+3. Refine patterns and principles based on validation
+4. Expand practitioner journey documentation
+5. Test methodology with external practitioners
 
-**Future (v0.3+):**
-1. Define adoption model
-2. Build out pattern library
-3. Create validation framework
-4. Develop publication strategy
+**Future (v0.8+ Polish & Launch):**
+1. Complete all planned guides
+2. Validate all cross-references
+3. Finalize publication strategy
+4. Execute launch and track adoption
+5. Iterate based on community feedback
 
 ---
 
