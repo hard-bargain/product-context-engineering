@@ -168,12 +168,20 @@ Encode who does what, where work moves next, and how AI output is validated.
 
 ## Session Protocols (NEW!)
 
-Based on Anthropic's research on effective harnesses for long-running agents:
+Based on [Anthropic's research on effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents):
 
+**Key Components:**
 - **EPIC Section 0** - Session State tracking at the top of every EPIC
-- **Session Start/End Protocols** - Mandatory handoff procedures
-- **Validation Script** - Audit Session State compliance
-- **Hook Templates** - Enforce protocols via git hooks or agent harnesses
+- **Session Start/End Protocols** - Mandatory handoff procedures documented in [CLAUDE.md Section 10](PRD-driven-context-engineering/CLAUDE.md#10-session-protocols)
+- **Validation Script** - Audit Session State compliance via `tools/validate_sessions.py`
+- **Hook Templates** - Enforce protocols via git hooks or agent harnesses in [templates/hooks/](PRD-driven-context-engineering/templates/hooks/)
+
+**Implementation Guide:** See [CLAUDE.md Section 10](PRD-driven-context-engineering/CLAUDE.md#10-session-protocols) for:
+- Session Start Protocol (10.1)
+- Session End Protocol (10.2) - MANDATORY
+- Session State Quality Checklist (10.3)
+- Context Window Discipline (10.4)
+- Session Handoff Validation (10.5)
 
 ---
 
