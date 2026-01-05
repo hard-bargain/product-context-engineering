@@ -938,13 +938,413 @@ Instead of duplicating feature descriptions, reference by ID:
 
 **File:** `active/epics/EPIC-01-launch.md`
 
-This is a long template - see the next section for the complete EPIC template.
+Copy the template from `templates/sot/EPIC-01-launch.md` and customize for your launch:
 
-[Template continues in next response due to length...]
+```bash
+cp templates/sot/EPIC-01-launch.md active/epics/EPIC-01-launch.md
+```
 
-Would you like me to continue with:
-1. The EPIC-01 template for Launch tracking
-2. All 7 SoT file templates (DECISIONS, FEATURES, TECHNICAL, etc.)
-3. Setup validation and next steps
+**Then customize:**
+1. Fill in launch timeline and dates
+2. Customize 40 issues for your launch plan (add/remove as needed)
+3. Set owners for each issue
+4. Define your specific milestones
+5. Adjust team allocation to match your ~30 person team
 
-Or should I create this as separate files you can reference individually?
+**Key sections to customize:**
+- **Section 0:** Update with current session state
+- **Section 1:** Define launch success criteria
+- **Section 2:** Customize all 40 issues (or create your own set)
+- **Section 3:** Track IDs and milestones
+
+**Time to Fill:** 30 minutes (issues can be refined over time)
+
+**See:** Full template at [templates/sot/EPIC-01-launch.md](templates/sot/EPIC-01-launch.md)
+
+---
+
+### Phase 4: Create Source of Truth Library (60-90 min)
+
+Create all 7 SoT files by copying templates and filling with your product data.
+
+#### File 1: DECISIONS.md (15 min)
+
+```bash
+cp templates/sot/DECISIONS.md active/source_of_truth/DECISIONS.md
+```
+
+**Fill in:**
+- DEC-001: First major strategic decision (e.g., target market)
+- DEC-002: Second decision (e.g., pricing model)
+- Add 2-3 more key decisions that shaped the product
+
+**Focus on:** Decisions that team members frequently ask about or that explain "why we did X"
+
+**See:** Full template at [templates/sot/DECISIONS.md](templates/sot/DECISIONS.md)
+
+---
+
+#### File 2: FEATURES.md (15 min)
+
+```bash
+cp templates/sot/FEATURES.md active/source_of_truth/FEATURES.md
+```
+
+**Fill in:**
+- FEAT-001 through FEAT-005: Your must-have launch features
+- FEAT-010+: Should-have or post-launch features
+- Feature status, owners, and priorities
+
+**Make sure:** Each feature has clear scope (in/out), user story, and success metrics
+
+**See:** Full template at [templates/sot/FEATURES.md](templates/sot/FEATURES.md)
+
+---
+
+#### File 3: TECHNICAL.md (15 min)
+
+```bash
+cp templates/sot/TECHNICAL.md active/source_of_truth/TECHNICAL.md
+```
+
+**Fill in:**
+- Complete tech stack (frontend, backend, infrastructure)
+- TECH-001: Authentication architecture (or your first major technical decision)
+- TECH-002+: Other key technical decisions
+- Code patterns and conventions your team uses
+
+**See:** Full template at [templates/sot/TECHNICAL.md](templates/sot/TECHNICAL.md)
+
+---
+
+#### File 4: MARKET.md (15 min)
+
+```bash
+cp templates/sot/MARKET.md active/source_of_truth/MARKET.md
+```
+
+**Fill in:**
+- MKT-001: Primary customer persona
+- MKT-010: Competitive landscape overview
+- MKT-011+: Top 2-3 competitors analyzed
+- Beta feedback if available (MKT-030)
+
+**See:** Full template at [templates/sot/MARKET.md](templates/sot/MARKET.md)
+
+---
+
+#### File 5: METRICS.md (15 min)
+
+```bash
+cp templates/sot/METRICS.md active/source_of_truth/METRICS.md
+```
+
+**Fill in:**
+- MET-001: Your North Star Metric
+- MET-002 through MET-005: Launch metrics (signups, conversion, activation, retention)
+- MET-010+: Product health and business metrics
+- Set targets for week 1, week 4, month 1
+
+**See:** Full template at [templates/sot/METRICS.md](templates/sot/METRICS.md)
+
+---
+
+#### File 6: TEAM.md (10 min)
+
+```bash
+cp templates/sot/TEAM.md active/source_of_truth/TEAM.md
+```
+
+**Fill in:**
+- TEAM-001: Full team structure (~30 people across 5 functions)
+- Team leads and key members for each function
+- RACI matrix for decision-making
+- Communication norms and processes
+
+**See:** Full template at [templates/sot/TEAM.md](templates/sot/TEAM.md)
+
+---
+
+#### File 7: RELEASES.md (10 min)
+
+```bash
+cp templates/sot/RELEASES.md active/source_of_truth/RELEASES.md
+```
+
+**Fill in:**
+- REL-001: v1.0 launch details
+- REL-002: v0.9 beta (if you had one)
+- What's included in launch
+- Success criteria and metrics
+- Post-launch feedback (add after launch)
+
+**See:** Full template at [templates/sot/RELEASES.md](templates/sot/RELEASES.md)
+
+---
+
+**After creating all SoT files, commit:**
+
+```bash
+git add active/
+git commit -m "feat: Add SoT library with product context
+
+Created 7 Source of Truth files:
+- DECISIONS.md: Key strategic and product decisions
+- FEATURES.md: v1.0 launch features and roadmap
+- TECHNICAL.md: Tech stack and architecture
+- MARKET.md: Customer personas and competitive analysis
+- METRICS.md: KPIs and launch metrics
+- TEAM.md: Team structure and responsibilities
+- RELEASES.md: Release tracking and version history
+
+Also created EPIC-01 for launch execution tracking."
+```
+
+---
+
+### Phase 5: Configure Project Bob & Validate (30 min)
+
+#### Step 5.1: Load Context in Project Bob
+
+**Option A: If Project Bob has workspace/context settings:**
+1. Open Project Bob settings/preferences
+2. Look for "workspace knowledge" or "context files" setting
+3. Point it to your repo root or `.claude/` directory
+4. Configure to load files in this order:
+   - README.md
+   - PRD.md
+   - CLAUDE.md
+   - active/source_of_truth/*.md
+
+**Option B: If Project Bob doesn't have explicit context settings:**
+- You'll reference context manually in conversations
+- Start questions with: "Context: See PRD.md and active/source_of_truth/"
+- Or create saved prompts that load context
+
+**Option C: Check Project Bob documentation:**
+- Look for "How to set up project context" in Project Bob docs
+- May have specific file conventions (.project-context, .ai/, etc.)
+
+---
+
+#### Step 5.2: Validation Tests
+
+Test that AI can access and use your context:
+
+**Test 1: Basic Awareness**
+```
+Q: "What product am I working on and what phase are we in?"
+Expected: "[Your Product Name] in Launch phase"
+Source: README.md and PRD.md
+```
+
+**Test 2: Strategic Understanding**
+```
+Q: "Who is our target customer and what problem do we solve for them?"
+Expected: Specific answer from PRD.md and MKT-001
+```
+
+**Test 3: Feature Knowledge**
+```
+Q: "What does FEAT-001 do and why is it important?"
+Expected: Definition from FEATURES.md
+```
+
+**Test 4: Team Awareness**
+```
+Q: "Who should I ask about [technical question]?"
+Expected: Reference to TEAM.md, specific person name
+```
+
+**Test 5: Decision Context**
+```
+Q: "Why did we decide to [specific decision]?"
+Expected: Reference to DEC-XXX with rationale
+```
+
+**Test 6: Cross-Layer Reasoning**
+```
+Q: "Should we add [feature X] before launch?"
+Expected: AI considers:
+- Strategic: PRD.md scope and vision
+- Tactical: EPIC-01 timeline
+- Features: Current roadmap in FEATURES.md
+- Provides contextual recommendation (not generic advice)
+```
+
+**Validation Checklist:**
+- [ ] AI knows product name and phase
+- [ ] AI can reference specific SoT files
+- [ ] AI uses ID system (mentions FEAT-XXX, DEC-XXX, etc.)
+- [ ] AI gives contextual answers (not generic)
+- [ ] AI considers cross-functional impact
+- [ ] AI respects established decisions
+
+---
+
+#### Step 5.3: Troubleshooting
+
+**If AI doesn't know your context:**
+- Check: Are files in correct locations?
+- Check: Can Project Bob access the directory?
+- Try: Explicitly mention file in question: "Based on PRD.md..."
+- Try: Start new chat session (may need to reload context)
+
+**If responses are generic:**
+- Make context more specific (add real data, not placeholders)
+- Reference specific IDs in your questions
+- Ask follow-up: "What in our PRD.md supports that recommendation?"
+
+**If context feels too large:**
+- Reduce file sizes (strategic <200, tactical <300, operational <500 lines)
+- Move detailed content to temp/ with links from SoT files
+
+**See full troubleshooting:** [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+
+---
+
+### Phase 6: Team Onboarding (Ongoing)
+
+#### Share with Team
+
+**Introduce the structure:**
+1. Share README.md with team — Explains what this is
+2. Walk through navigation — Show where things are
+3. Explain ID system — How to reference and avoid duplication
+4. Set expectations — Who updates what, how often
+
+**Team adoption:**
+- Product team: Owns PRD, EPIC, FEATURES, DECISIONS
+- Engineering: Owns TECHNICAL
+- Marketing: Owns MARKET
+- Everyone: Updates their relevant sections
+- Daily: README.md metrics, EPIC-01 progress
+- Weekly: Review and update relevant SoT files
+
+#### Create Team Habits
+
+**Daily (During Launch):**
+- Morning standup: Review README + EPIC-01 for priorities
+- End of day: Update metrics in README, update EPIC progress
+
+**Weekly:**
+- Review EPIC-01: Update issue status, adjust priorities
+- Update SoT files: New decisions, features, customer feedback
+- Check context freshness: Remove stale info
+
+**Monthly:**
+- Full context review: Is everything current?
+- Update PRD if strategic changes
+- Review and update metrics definitions
+
+---
+
+## Setup Complete! 🎉
+
+You now have a complete ACE + SoT structure for your 30-person team and Launch phase product.
+
+### What You've Built
+
+```
+your-product/
+├── PRD.md                          ✅ Product strategy and vision
+├── README.md                       ✅ Navigation and live metrics
+├── CLAUDE.md                       ✅ AI operating guide
+├── active/
+│   ├── epics/
+│   │   └── EPIC-01-launch.md      ✅ Launch execution tracking
+│   └── source_of_truth/
+│       ├── DECISIONS.md            ✅ Strategic decisions + rationale
+│       ├── FEATURES.md             ✅ Feature definitions and roadmap
+│       ├── TECHNICAL.md            ✅ Tech stack and architecture
+│       ├── MARKET.md               ✅ Customer insights and competitive analysis
+│       ├── METRICS.md              ✅ KPIs and measurement
+│       ├── TEAM.md                 ✅ Team structure and ownership
+│       └── RELEASES.md             ✅ Version history and releases
+└── temp/                           ✅ Scratch and archives
+```
+
+**Total Investment:** 2-4 hours setup
+**Expected Return:** 5-12 hours/week saved per person × 30 people = 150-360 hours/week
+**ROI:** ~50-180x return
+
+---
+
+## Next Steps
+
+### Week 1: Daily Use
+
+**Test the system:**
+- Use Project Bob AI with context for daily questions
+- Update EPIC-01 and README daily
+- Track time saved and friction points
+
+**Iterate:**
+- Refine content based on actual use
+- Add missing context as you discover gaps
+- Remove unnecessary detail
+
+### Week 2-4: Team Adoption
+
+**Expand usage:**
+- Onboard key team members to the structure
+- Establish update routines (who, when, what)
+- Collect feedback on what works/doesn't
+
+**Measure impact:**
+- Time saved per person
+- Decision-making speed
+- Team alignment improvements
+- AI response quality
+
+### Month 2+: Optimize
+
+**Refine the system:**
+- Streamline based on learnings
+- Automate where possible (metrics dashboards, etc.)
+- Build team muscle memory
+
+**Share learnings:**
+- Document what worked for your 30-person team
+- Contribute feedback to ACE methodology
+- Help improve the approach
+
+---
+
+## Getting Help
+
+**As you set up and use this system:**
+
+1. **Keep notes** of issues and questions
+2. **Track what works** and what doesn't
+3. **Document Project Bob quirks** you discover
+4. **Measure impact** (time saved, quality improvements)
+5. **Share feedback** to improve ACE and these guides
+
+**Your experience with a 30-person team will provide invaluable validation data for ACE!**
+
+---
+
+## Additional Resources
+
+**Full ACE Methodology:**
+- [ACE_METHODOLOGY_SUMMARY.md](../ACE_METHODOLOGY_SUMMARY.md) — Complete methodology overview
+- [CONTEXT_PATTERNS.md](../active/source_of_truth/CONTEXT_PATTERNS.md) — Core patterns
+- [PRACTITIONER_JOURNEYS.md](../active/source_of_truth/PRACTITIONER_JOURNEYS.md) — Role-specific guidance
+
+**Setup Guides:**
+- [QUICK_START_CHECKLIST.md](QUICK_START_CHECKLIST.md) — Printable checklist
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — Common issues and solutions
+- [setup-guides/README.md](README.md) — All available guides
+
+**Templates:**
+- [templates/sot/](templates/sot/) — All SoT file templates
+
+---
+
+**Setup Guide Version:** 1.0 (Full SoT Structure)
+**Last Updated:** 2026-01-05
+**For:** 30-person teams, Launch phase products, Project Bob
+**Maintained By:** ACE Methodology Team
+
+**This setup becomes VAL-002 for ACE methodology validation!**
