@@ -1,7 +1,7 @@
 # AI Context Engineering (ACE)
 
-**Status:** v0.1 Spark (Foundation Development)
-**Last Updated:** 2025-12-26
+**Status:** v0.4 Foundation Complete
+**Last Updated:** 2026-01-05
 **Developed Using:** [GHM-M](../GHM-M/MRD.md) v0.4
 
 ---
@@ -10,12 +10,12 @@
 
 | Field | Value |
 |-------|-------|
-| **MRD Version** | v0.1 (Spark) |
-| **Current Phase** | Foundation Setup |
-| **Active EPIC** | EPIC-01: ACE Foundation |
-| **Current Issue** | Creating navigation files and initial structure |
-| **Next Milestone** | v0.4 Foundation Complete |
-| **Validation** | Contributing to [VAL-001](../GHM-M/active/source_of_truth/VALIDATION.md#val-001) |
+| **MRD Version** | v0.4 (Foundation) |
+| **Current Phase** | External Validation (VAL-002) |
+| **Active EPIC** | EPIC-02: v0.6 Validation |
+| **Current Focus** | Real-world pilot testing with product teams |
+| **Next Milestone** | v0.6 Validation Complete |
+| **Validation** | VAL-001 Complete (GHM-M proven), VAL-002 In Progress (External teams) |
 
 ---
 
@@ -70,11 +70,16 @@ Located in `active/source_of_truth/`:
 
 ### 🔧 Documentation
 Located in `docs/`:
-- `getting_started.md` — Onboarding guide for teams
-- `phase_alignment.md` — How ACE maps to product phases
-- `discipline_guides/` — Role-specific guidance
+- **[getting_started.md](docs/getting_started.md)** — Onboarding guide for teams ✅
+- `phase_alignment.md` — How ACE maps to product phases (coming soon)
+- `discipline_guides/` — Role-specific guidance (coming soon)
 
-*(To be created during foundation build)*
+### 🚀 Setup Guides
+Located in `setup-guides/`:
+- **[PROJECT_BOB_SETUP.md](setup-guides/PROJECT_BOB_SETUP.md)** — Complete setup for Project Bob (Launch phase) ✅
+- **[QUICK_START_CHECKLIST.md](setup-guides/QUICK_START_CHECKLIST.md)** — Printable setup checklist ✅
+- **[TROUBLESHOOTING.md](setup-guides/TROUBLESHOOTING.md)** — Common issues and solutions ✅
+- See [setup-guides/README.md](setup-guides/README.md) for full navigation
 
 ### 📋 Templates
 Located in `templates/`:
@@ -88,26 +93,27 @@ Located in `templates/`:
 
 ## Current Work
 
-### Active EPIC: EPIC-01 ACE Foundation
+### Active EPIC: EPIC-02 External Validation
 
-**Goal:** Establish foundation for ACE methodology (v0.1 → v0.4)
+**Goal:** Validate ACE with real product teams (v0.4 → v0.6)
 
-**Progress:** Phase 1 (Planning) — 10%
+**Progress:** VAL-002 In Progress
 
-**Phases:**
-- [🔄] **Phase 1:** Problem Definition & Scope (4 issues)
-- [⏳] **Phase 2:** Core Patterns (5 issues)
-- [⏳] **Phase 3:** Practitioner Journeys (4 issues)
-- [⏳] **Phase 4:** Documentation (3 issues)
-- [⏳] **Phase 5:** Validation Documentation (4 issues)
+**Completed (v0.4 Foundation):**
+- ✅ 5 Core Patterns (PAT-001 to PAT-005)
+- ✅ 5 Methodology Principles (MP-001 to MP-005)
+- ✅ 4 Practitioner Journeys (PJ-001 to PJ-004)
+- ✅ 3 Workflows (WF-001 to WF-003)
+- ✅ 3 Templates (TEMP-001 to TEMP-003)
+- ✅ 1 Getting Started Guide (GUIDE-001)
+- ✅ VAL-001 Complete (GHM-M validated for domain transfer)
 
-**Current Status:**
-- ✅ MRD v0.1 created with problem/vision
-- ✅ Directory structure established
-- 🔄 Creating navigation files
-- ⏳ Initial patterns to be defined
+**Current Focus:**
+- 🔄 VAL-002: First external pilot (Project Bob setup)
+- ⏳ VAL-003: Second external pilot (planned)
+- ⏳ Refinements based on real-world feedback
 
-**Track Progress:** See EPIC-01 Section 2 (when created)
+**Track Progress:** See [VAL-001](../GHM-M/active/source_of_truth/VALIDATION.md)
 
 ---
 
@@ -126,8 +132,8 @@ ACE uses GHM-M's ID prefix system, adapted for context engineering:
 | **GUIDE-XXX** | Guide | GUIDES.md | How-to documentation | GUIDE-001: Getting started |
 | **TOOL-XXX** | Tool | TOOLS.md | Context management tools | TOOL-001: Context validator |
 
-**Total IDs:** 0 (foundation just starting)
-**Target for v0.4:** 20-25 IDs
+**Total IDs:** 21 (v0.4 Foundation Complete)
+**Target for v0.6:** 25-30 IDs (add remaining journeys, more examples)
 
 ---
 
@@ -140,47 +146,75 @@ Using GHM-M v0.4 methodology. Contributing to VAL-001 validation case study.
 
 ## Metrics
 
-### Foundation Progress
+### Foundation Progress (v0.4)
 - **Directory Structure:** ✅ Complete
-- **Navigation Files:** 🔄 In Progress (1/3)
-- **MRD:** ✅ v0.1 Spark created
-- **SoT Files:** ⏳ Pending (0/8)
-- **Templates:** ⏳ Pending (0/~10)
-- **Documentation:** ⏳ Pending (0/3)
+- **Navigation Files:** ✅ Complete (3/3)
+- **MRD:** ✅ v0.4 Foundation created
+- **SoT Files:** ✅ Complete (5/5 core files)
+- **Templates:** ✅ Complete (3/3 core templates)
+- **Documentation:** ✅ Complete (1 getting started guide, 3 setup guides)
+- **Setup Guides:** ✅ Complete (4 files for Project Bob)
 
 ### IDs Created
-- **Total:** 0
-- **Target v0.4:** 20-25
-- **By Type:** TBD
+- **Total:** 21 IDs
+- **By Type:**
+  - PAT: 5 (Context patterns)
+  - MP: 5 (Methodology principles)
+  - PJ: 4 (Practitioner journeys)
+  - WF: 3 (Workflows)
+  - TEMP: 3 (Templates)
+  - GUIDE: 1 (Getting started)
 
-### Validation (VAL-001)
-- **GHM-M Template Usage:** ✅ MRD template worked well
-- **Progressive Documentation:** 🔄 Testing v0.1 → v0.4 flow
-- **ID System:** ⏳ To be tested during build
-- **Session Protocols:** ⏳ To be implemented
+### Validation
+- **VAL-001 (GHM-M Dogfooding):** ✅ Complete - GHM-M proven for domain transfer
+- **VAL-002 (External Pilot):** 🔄 In Progress - Project Bob pilot starting
+- **VAL-003 (Second Pilot):** ⏳ Planned - After VAL-002 feedback
+
+### Expected Impact (From VAL-001)
+- **Time Savings:** 5-12 hours/week per person
+- **AI Quality:** 3x improvement
+- **Velocity:** 15-50% increase (by discipline)
+- **ROI:** 16x return on investment
 
 ---
 
 ## Quick Start
 
-### For New Sessions (AI Agents)
-1. Read this README for current status
-2. Read EPIC-01 Section 0 for session state (when created)
-3. Review [MRD.md](MRD.md) for context
-4. Check active issue in EPIC
-5. Follow CLAUDE.md session protocols (when created)
+### For Teams Adopting ACE
 
-### For New Practitioners (Humans)
-1. Read [MRD.md](MRD.md) to understand ACE vision
-2. Understand the problem: AI context management for cross-discipline teams
-3. Explore patterns and templates (once created)
-4. See practitioner journeys for your discipline (once created)
+**Option 1: Using Project Bob or Similar IDE (Recommended)**
+1. Go to [setup-guides/PROJECT_BOB_SETUP.md](setup-guides/PROJECT_BOB_SETUP.md)
+2. Follow step-by-step setup (30-60 min)
+3. Use [QUICK_START_CHECKLIST.md](setup-guides/QUICK_START_CHECKLIST.md) to track progress
+4. Reference [TROUBLESHOOTING.md](setup-guides/TROUBLESHOOTING.md) if issues arise
+
+**Option 2: General Setup**
+1. Read [docs/getting_started.md](docs/getting_started.md)
+2. Review [ACE_METHODOLOGY_SUMMARY.md](ACE_METHODOLOGY_SUMMARY.md) for overview
+3. Explore patterns in [active/source_of_truth/CONTEXT_PATTERNS.md](active/source_of_truth/CONTEXT_PATTERNS.md)
+4. Check practitioner journey for your role in [active/source_of_truth/PRACTITIONER_JOURNEYS.md](active/source_of_truth/PRACTITIONER_JOURNEYS.md)
+
+### For Understanding ACE
+
+**Quick Overview (5 min):**
+- Read [ACE_METHODOLOGY_SUMMARY.md](ACE_METHODOLOGY_SUMMARY.md)
+
+**Deep Dive (30 min):**
+1. Read [MRD.md](MRD.md) for complete vision
+2. Review core patterns (PAT-001 to PAT-005)
+3. Check your discipline's practitioner journey
+
+### For AI Agents (Session Start)
+1. Read this README for current status
+2. Review [CLAUDE.md](CLAUDE.md) for session protocols
+3. Check active EPIC for current work
+4. Reference [MRD.md](MRD.md) for ACE context
 
 ### For Contributors
-1. Review [GHM-M](../GHM-M/MRD.md) to understand development methodology
-2. Check [VAL-001](../GHM-M/active/source_of_truth/VALIDATION.md#val-001) to see validation objectives
+1. Review [GHM-M](../GHM-M/MRD.md) development methodology
+2. Check [VAL-001](../GHM-M/active/source_of_truth/VALIDATION.md) validation results
 3. Follow GHM-M session protocols
-4. Track all IDs in EPIC Section 3A
+4. Contribute to VAL-002/VAL-003 external validation
 
 ---
 
