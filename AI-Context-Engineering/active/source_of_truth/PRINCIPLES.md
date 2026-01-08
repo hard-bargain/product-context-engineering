@@ -8,69 +8,78 @@
 
 ---
 
-## MP-001: Phase Alignment Over Universal Structure
+## MP-001: Gate Alignment Over Universal Structure
 
 **Status:** Active
 **Category:** Structure
 
 ### Principle
-Context structure should align with product development phase, not force universal structure across all phases.
+Context structure should align with product development gate, not force universal structure across all gates.
 
 ### Rationale
-Different phases have fundamentally different information needs:
-- **Concept phase** needs strategic vision and market validation
-- **Build phase** needs implementation details and code architecture
-- **Scale phase** needs growth metrics and optimization insights
+Different gates have fundamentally different information needs:
+- **v0.1 Spark** needs problem statement and vision
+- **v0.2-v0.3 Market/Commercial** needs strategic positioning and monetization
+- **v0.6-v0.7 Architecture/Build** needs implementation details and code architecture
+- **v1.0 Market Adoption** needs growth metrics and optimization insights
 
-Forcing same context structure across all phases creates friction and reduces effectiveness.
+Forcing same context structure across all gates creates friction and reduces effectiveness.
 
 ### Application
 
 **Do:**
-- ✅ Adjust context layer weights as phases change (see PAT-002)
-- ✅ Archive phase-specific context when transitioning
-- ✅ Emphasize appropriate detail level for current phase
-- ✅ Review and update context structure at phase boundaries
+- ✅ Adjust context layer weights as gates change (see PAT-002)
+- ✅ Archive gate-specific context when transitioning
+- ✅ Emphasize appropriate detail level for current gate
+- ✅ Review and update context structure at gate boundaries
+- ✅ Include gate-critical deliverables (e.g., TAM in v0.2, architecture in v0.6)
 
 **Don't:**
-- ❌ Maintain detailed code context during Concept phase
-- ❌ Keep only strategic vision during Build phase
-- ❌ Use identical context template across all phases
-- ❌ Ignore phase transitions when evolving context
+- ❌ Maintain detailed code context during v0.1 Spark or v0.2 Market Definition
+- ❌ Keep only strategic vision during v0.7 Build Execution
+- ❌ Use identical context template across all gates
+- ❌ Ignore gate transitions when evolving context
+- ❌ Skip critical gates (v0.2 Market Definition, v0.3 Commercial Model, v0.6 Architecture)
 
 ### Example
 
-**Concept Phase** (Strategic-Heavy):
+**v0.1 Spark** (Strategic-Heavy):
 ```markdown
-## Context (Concept Phase)
+## Context (v0.1 Spark)
 
-### Strategic (80%)
-Vision, market opportunity, customer validation...
+### Strategic (90%)
+Problem: SMBs lose $50K/year on manual workflows
+Vision: Enable SMBs to compete with enterprises through AI automation
+Market: $10B TAM, 5M target SMBs
 
-### Tactical (20%)
-MVP scope, initial hypotheses...
+### Tactical (10%)
+Initial scope ideas, success signals
 
-### Operational (Minimal)
-Tech stack exploration only
+### Operational (0%)
+Not yet defined
 ```
 
-**Build Phase** (Operational-Heavy):
+**v0.7 Build Execution** (Operational-Heavy):
 ```markdown
-## Context (Build Phase)
+## Context (v0.7 Build)
 
 ### Strategic (5%)
-Vision summary, link to full strategy...
+Vision: AI automation for SMBs (link to PRD)
 
-### Tactical (35%)
-Feature specs, architecture decisions...
+### Tactical (30%)
+Sprint 8/12: HubSpot integration
+Must-complete: EPIC-002, EPIC-003
 
-### Operational (60%)
-Code, APIs, implementation details...
+### Operational (65%)
+Active files: src/integrations/hubspot/
+Code patterns: Repository, Factory, Strategy
+Current task: Rate limit handling
+Test coverage: 78%
 ```
 
 ### Related IDs
-- [PAT-002: Phase Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
-- [WF-001: Phase Transition Workflow](WORKFLOWS.md#wf-001)
+- [PAT-002: Gate Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
+- [WF-001: Gate Transition Workflow](WORKFLOWS.md#wf-001)
 
 ---
 

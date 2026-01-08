@@ -44,7 +44,7 @@ validation_case: "VAL-001"
 | v0.8 | TBD | Polish | Documentation complete, publication ready | Pending |
 | v1.0 | TBD | Launch | Published, community building | Pending |
 
-*Note: Using GHM-M's 5-gate lifecycle (simplified from GHM's 10 gates)*
+*Note: ACE methodology itself uses GHM-M's 5-gate development lifecycle. ACE defines a 10-gate lifecycle (v0.1-v1.0) for products developed using ACE.*
 
 ---
 
@@ -61,7 +61,7 @@ Cross-discipline product teams increasingly rely on AI agents (like Claude, GPT,
 **The Solution:**
 AI Context Engineering (ACE) provides a structured methodology for managing AI context across the product lifecycle. It defines:
 - Context layers (strategic, tactical, operational) for different team roles
-- Phase-aligned context structures matching product development stages
+- Gate-aligned context structures matching product development stages (10-gate lifecycle: v0.1-v1.0)
 - Discipline-specific patterns for how each role contributes to context
 - Evolution workflows for growing context through the lifecycle
 - Quality metrics and validation approaches
@@ -76,10 +76,10 @@ As AI becomes central to product development, teams that master context engineer
 ### 1. Problem Statement
 
 **The Core Challenge:**
-Product teams work across multiple disciplines (strategy, management, design, development, testing, marketing) and multiple phases (from concept to launch and beyond). AI agents can support every discipline and phase, but only if they have appropriate context. Currently, there's no methodology for:
+Product teams work across multiple disciplines (strategy, management, design, development, testing, marketing) and multiple development gates (from spark to market adoption). AI agents can support every discipline and gate, but only if they have appropriate context. Currently, there's no methodology for:
 
-1. **Structuring Context**: How should context be organized for different disciplines and phases?
-2. **Evolving Context**: How does context grow and change as products move through development?
+1. **Structuring Context**: How should context be organized for different disciplines and development gates?
+2. **Evolving Context**: How does context grow and change as products move through development gates?
 3. **Maintaining Quality**: How do we ensure context remains accurate, relevant, and complete?
 4. **Enabling Collaboration**: How do multiple disciplines contribute to shared context?
 5. **Validating Effectiveness**: How do we measure whether context is working?
@@ -90,13 +90,13 @@ Product teams work across multiple disciplines (strategy, management, design, de
 1. **Starting from scratch**: Every team member reinvents how to structure context for AI
 2. **Context staleness**: Context becomes outdated as product evolves, reducing AI effectiveness
 3. **Duplication**: Different people maintain overlapping context independently
-4. **Handoff failures**: Context doesn't transfer well between phases or team members
+4. **Handoff failures**: Context doesn't transfer well between gates or team members
 5. **No quality standards**: Unclear what "good context" looks like
 
 **For Team Leads:**
 1. **Inconsistent AI leverage**: Some team members get great AI support, others struggle
 2. **Scaling challenges**: Can't replicate good context practices across growing teams
-3. **Phase transitions**: Context breaks down when moving between development phases
+3. **Gate transitions**: Context breaks down when moving between development gates (e.g., v0.4 → v0.6)
 4. **Cross-discipline gaps**: Strategists, designers, and developers use incompatible context approaches
 
 **For Organizations:**

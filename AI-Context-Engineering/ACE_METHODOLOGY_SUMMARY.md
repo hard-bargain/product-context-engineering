@@ -20,7 +20,7 @@ Product teams (strategists, PMs, designers, developers, testers, marketers) incr
 **The Solution:**
 ACE provides structured approaches for:
 - **Context Structure** - Three layers (Strategic, Tactical, Operational) for different roles and needs
-- **Phase Alignment** - Context evolves through 6 product phases (Concept → Design → Build → Test → Launch → Scale)
+- **Gate Alignment** - Context evolves through 10 product development gates (v0.1 Spark → v1.0 Market Adoption)
 - **Discipline Collaboration** - Shared core + specialized extensions for each role
 - **Quality Assurance** - Systematic validation and evolution workflows
 
@@ -87,7 +87,7 @@ Result: Saves 10 min of context-setting per conversation
 - **Size Target:** <300 lines
 
 **Content:**
-- Current phase objectives
+- Current gate objectives and deliverables
 - Feature requirements and specs
 - Design decisions and rationale
 - Dependencies and blockers
@@ -122,28 +122,33 @@ AI: [Generates code matching your conventions, using your libraries]
 Result: 80% working code on first try (vs 40% without context)
 ```
 
-### 2. Phase Alignment Pattern (PAT-002)
+### 2. Gate Alignment Pattern (PAT-002)
 
-Context emphasis shifts as products move through phases:
+Context emphasis shifts as products move through development gates:
 
-| Phase | Strategic | Tactical | Operational | Primary Focus |
-|-------|-----------|----------|-------------|---------------|
-| **Concept** | 80% | 20% | 0% | Vision, market validation |
-| **Design** | 20% | 60% | 20% | User research, specs |
-| **Build** | 5% | 35% | 60% | Implementation, code |
-| **Test** | 5% | 50% | 45% | QA, bug fixes |
-| **Launch** | 30% | 55% | 15% | Go-to-market |
-| **Scale** | 40% | 35% | 25% | Growth, iteration |
+| Gate | Strategic | Tactical | Operational | Primary Focus |
+|------|-----------|----------|-------------|---------------|
+| **v0.1 Spark** | 90% | 10% | 0% | Problem/vision validation |
+| **v0.2 Market Definition** | 70% | 30% | 0% | Segments, TAM, ICP |
+| **v0.3 Commercial Model** | 60% | 40% | 0% | Pricing, positioning, moat |
+| **v0.4 User Journeys** | 30% | 60% | 10% | Personas, pain/value alignment |
+| **v0.5 Red Team Review** | 20% | 70% | 10% | Risk analysis, mitigation |
+| **v0.6 Architecture** | 10% | 40% | 50% | Tech stack, system design |
+| **v0.7 Build Execution** | 5% | 30% | 65% | Implementation, EPICs |
+| **v0.8 Deployment & Ops** | 5% | 40% | 55% | Infrastructure, monitoring |
+| **v0.9 Go-to-Market** | 35% | 50% | 15% | Launch campaigns, messaging |
+| **v1.0 Market Adoption** | 40% | 35% | 25% | Optimization, iteration |
 
 **Why This Matters:**
-- Concept phase needs market context, not code details
-- Build phase needs implementation specifics, not strategy documents
+- Early gates (v0.1-v0.3) need strategic context, not code details
+- Build gates (v0.6-v0.7) need implementation specifics, not just strategy
+- GTM gates (v0.8-v0.9) require balanced context for launch coordination
 - Using wrong emphasis wastes context space and confuses AI
 
 **Transition Process:**
-- Archive previous phase details (don't lose, just move to temp/)
-- Shift layer weights gradually over first 2 weeks
-- Add new phase-specific content
+- Archive previous gate details (don't lose, just move to temp/)
+- Shift layer weights gradually over 1-2 weeks
+- Add new gate-specific content
 - Update cross-discipline references
 
 ### 3. Discipline-Specific Context Pattern (PAT-003)
@@ -151,7 +156,7 @@ Context emphasis shifts as products move through phases:
 **Shared Core (All Disciplines):**
 - Product vision and strategy
 - Target customers
-- Current phase and objectives
+- Current gate and objectives
 - Key success metrics
 
 **+ Discipline Extensions:**
@@ -190,7 +195,7 @@ Context emphasis shifts as products move through phases:
 Context must evolve as products change:
 
 **Evolution Triggers:**
-1. **Phase Transitions** - Major restructuring
+1. **Gate Transitions** - Major restructuring (e.g., v0.4 → v0.5)
 2. **Sprint Boundaries** - Operational updates
 3. **Bi-weekly Reviews** - Tactical refresh
 4. **Monthly Reviews** - Strategic validation
@@ -211,7 +216,7 @@ Context must evolve as products change:
 - Weekly: Update operational layer (30 min)
 - Bi-weekly: Refresh tactical layer (30 min)
 - Monthly: Validate strategic layer (30 min)
-- Phase transitions: Full restructuring (2-3 hours)
+- Gate transitions: Full restructuring (2-3 hours per gate)
 
 ### 5. Context Quality Pattern (PAT-005)
 
@@ -310,7 +315,7 @@ Context must evolve as products change:
 ### Full Setup (2-4 hours)
 
 **Step 1: Assess Current State (30 min)**
-- Identify product phase
+- Identify product development gate (v0.1-v1.0)
 - List team disciplines
 - Rate pain points (1-5)
 
@@ -361,22 +366,22 @@ Context must evolve as products change:
 - AI effectiveness maintained
 - Team alignment preserved
 
-### Phase Transition Workflow (WF-001)
+### Gate Transition Workflow (WF-001)
 
 **Duration:** 2-3 hours
-**Frequency:** Each phase change (every 1-3 months)
+**Frequency:** Each gate change (varies by gate - weeks to months)
 
 **Process:**
-1. **Archive current phase** (60 min) - Move details to temp/
-2. **Shift layer weights** (30 min) - Per phase alignment pattern
-3. **Add new phase content** (60 min) - Phase-specific focus
+1. **Archive current gate context** (60 min) - Move details to temp/
+2. **Shift layer weights** (30 min) - Per gate alignment pattern (PAT-002)
+3. **Add new gate content** (60 min) - Gate-specific focus and deliverables
 4. **Update cross-refs** (30 min) - Ensure all disciplines synced
 5. **Validate** (30 min) - Test with AI, collect feedback
 
 **Outcomes:**
-- Smooth phase transitions
-- Context stays relevant
-- No loss of important decisions
+- Smooth gate transitions (e.g., v0.4 User Journeys → v0.5 Red Team Review)
+- Context stays relevant to current development stage
+- No loss of important decisions from previous gates
 
 ### Cross-Discipline Handoff Workflow (WF-003)
 
@@ -416,11 +421,11 @@ Context must evolve as products change:
 
 ### TEMP-002: Tactical Layer Template
 
-**When to Use:** Managing phase execution and features
+**When to Use:** Managing gate execution and features
 
 **Key Sections:**
-- Current phase and timeline
-- Phase objectives
+- Current gate and timeline
+- Gate objectives and deliverables
 - Features and requirements
 - Key decisions (with rationale)
 - Dependencies and blockers
@@ -479,7 +484,7 @@ Context must evolve as products change:
 
 **Short-term:**
 - Better cross-discipline collaboration
-- Smoother phase transitions
+- Smoother gate transitions (e.g., Market Definition → Commercial Model)
 - Reduced miscommunication (60% decrease)
 
 **Long-term:**
@@ -517,12 +522,12 @@ Context must evolve as products change:
 ✅ **Cross-references** - Enables collaboration
 ✅ **Role-specific guidance** - Each discipline gets what they need
 
-### 3. Phase-Aligned
+### 3. Gate-Aligned
 
-✅ **6 product phases** - Concept → Design → Build → Test → Launch → Scale
-✅ **Dynamic emphasis** - Context adapts to phase needs
-✅ **Transition workflows** - Systematic evolution
-✅ **Clear stopping points** - Know when to restructure
+✅ **10 development gates** - v0.1 Spark → v1.0 Market Adoption (full product lifecycle)
+✅ **Dynamic emphasis** - Context adapts to gate-specific needs
+✅ **Transition workflows** - Systematic evolution through gates
+✅ **Clear stopping points** - Know when to restructure for next gate
 
 ### 4. Quality-Focused
 
@@ -643,7 +648,7 @@ ACE is a **complete, practical methodology** for AI context engineering in produ
 - 21 components (patterns, principles, journeys, workflows, templates, guides)
 - ~6000 lines of actionable guidance
 - Multi-discipline (6 roles covered)
-- Phase-aligned (6 product phases)
+- Gate-aligned (10 development gates following GHM lifecycle)
 - Quality-focused (systematic validation)
 
 ### Expected Impact
@@ -666,10 +671,11 @@ ACE is a **complete, practical methodology** for AI context engineering in produ
 ### Quality Assessment
 
 **Strengths:**
-- ✅ Comprehensive (all key aspects covered)
+- ✅ Comprehensive (all key aspects covered, full product lifecycle)
 - ✅ Practical (templates, examples, workflows)
 - ✅ Multi-discipline (not developer-only)
 - ✅ Evidence-based (ROI calculations)
+- ✅ Aligned with proven methodologies (follows GHM 10-gate structure)
 
 **Limitations:**
 - ⚠️ Not externally validated yet
