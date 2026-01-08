@@ -8,131 +8,134 @@
 
 ---
 
-## WF-001: Phase Transition Workflow
+## WF-001: Gate Transition Workflow
 
 **Status:** Active
 **Category:** Context Evolution
-**Frequency:** Each product phase transition (every 1-3 months)
+**Frequency:** Each product gate transition (varies by gate: days to months)
 
 ### Purpose
-Systematically transition AI context when moving between product development phases (Concept → Design → Build → Test → Launch → Scale), ensuring context remains aligned and valuable.
+Systematically transition AI context when moving between product development gates (v0.1 Spark → v0.2 Market Definition → ... → v1.0 Market Adoption), ensuring context remains aligned with gate-specific deliverables and needs.
 
 ### When to Execute
-- **Trigger**: Product phase change (e.g., completing Design, starting Build)
-- **Timing**: Within first week of new phase
-- **Owner**: Product Manager (with discipline leads)
+- **Trigger**: Product gate completion and readiness for next gate (e.g., v0.4 User Journeys complete, starting v0.5 Red Team Review)
+- **Timing**: Within first week of new gate
+- **Owner**: Product Manager or gate-specific owner (Strategy lead for v0.1-v0.3, Build lead for v0.6-v0.8, GTM lead for v0.9)
 
 ### Pre-Transition Checklist
 
 **1 Week Before Transition:**
-- [ ] Review current phase context completeness
-- [ ] Archive phase-specific details to temp/
-- [ ] Identify what carries forward to next phase
-- [ ] Document key decisions and learnings
+- [ ] Review current gate context completeness and deliverables
+- [ ] Archive gate-specific details to temp/
+- [ ] Identify what carries forward to next gate
+- [ ] Document key decisions and learnings (DEC-XXX, TECH-XXX, etc.)
 - [ ] Update strategic layer with validated insights
+- [ ] Confirm gate exit criteria met (see gate-specific checklist)
 
 ### Transition Steps
 
-**Step 1: Archive Current Phase Context (Day 1)**
+**Step 1: Archive Current Gate Context (Day 1)**
 
-Archive detailed phase-specific content:
+Archive detailed gate-specific content:
 
 ```markdown
 ## Archive Checklist
 
-From: Design Phase
-To: temp/design-phase-archive-2024-01.md
+From: v0.4 User Journeys
+To: temp/v04-user-journeys-archive-2024-01.md
 
 Archiving:
-- [ ] Detailed user research notes
-- [ ] Design iteration history
-- [ ] Mockup versions and rationale
-- [ ] Usability test results
+- [ ] Detailed user research notes and interview transcripts
+- [ ] Journey map iterations
+- [ ] Persona research and validation notes
+- [ ] User story backlog (draft versions)
 
 Keeping (summarized):
-- ✅ Final design decisions and rationale
-- ✅ Design system components created
-- ✅ Key user insights that inform build
-- ✅ Acceptance criteria for features
+- ✅ Final persona definitions (link to full in temp/)
+- ✅ Core user journeys and pain points
+- ✅ Must-have feature list with rationale
+- ✅ Key user insights informing architecture
 ```
 
 **Step 2: Update Context Layer Weights (Day 1-2)**
 
-Shift emphasis based on new phase per [PAT-002](CONTEXT_PATTERNS.md#pat-002):
+Shift emphasis based on new gate per [PAT-002](CONTEXT_PATTERNS.md#pat-002):
 
-| From Phase | To Phase | Strategic | Tactical | Operational |
-|------------|----------|-----------|----------|-------------|
-| Concept | Design | 80% → 20% | 20% → 60% | 0% → 20% |
-| Design | Build | 20% → 5% | 60% → 35% | 20% → 60% |
-| Build | Test | 5% → 5% | 35% → 50% | 60% → 45% |
-| Test | Launch | 5% → 30% | 50% → 55% | 45% → 15% |
-| Launch | Scale | 30% → 40% | 55% → 35% | 15% → 25% |
+| From Gate | To Gate | Strategic | Tactical | Operational |
+|-----------|---------|-----------|----------|-------------|
+| v0.1 Spark | v0.2 Market | 90% → 70% | 10% → 30% | 0% → 0% |
+| v0.2 Market | v0.3 Commercial | 70% → 60% | 30% → 40% | 0% → 0% |
+| v0.3 Commercial | v0.4 Journeys | 60% → 30% | 40% → 60% | 0% → 10% |
+| v0.4 Journeys | v0.5 Red Team | 30% → 20% | 60% → 70% | 10% → 10% |
+| v0.5 Red Team | v0.6 Architecture | 20% → 10% | 70% → 40% | 10% → 50% |
+| v0.6 Architecture | v0.7 Build | 10% → 5% | 40% → 30% | 50% → 65% |
+| v0.7 Build | v0.8 Deployment | 5% → 5% | 30% → 40% | 65% → 55% |
+| v0.8 Deployment | v0.9 GTM | 5% → 35% | 40% → 50% | 55% → 15% |
+| v0.9 GTM | v1.0 Adoption | 35% → 40% | 50% → 35% | 15% → 25% |
 
-**Example Transition (Design → Build):**
+**Example Transition (v0.4 User Journeys → v0.5 Red Team Review):**
 
 ```markdown
-## Context Restructuring: Design → Build
+## Context Restructuring: v0.4 Journeys → v0.5 Red Team
 
-### Strategic Layer (20% → 5%)
+### Strategic Layer (30% → 20%)
 Before:
-- Full vision statement (300 words)
-- Detailed market analysis
-- Complete customer personas
+- Vision and market positioning
+- Target customer segments
+- Competitive differentiation
 
 After:
-- Vision summary (50 words) + link to full doc
-- Key customer insight: "Busy Beth needs no-code automation"
-- Link to market analysis in temp/
+- Vision summary (link to full PRD)
+- Key market validation: "50 SMBs validated pain point"
+- Link to v0.2-v0.3 docs in temp/
 
-### Tactical Layer (60% → 35%)
+### Tactical Layer (60% → 70%)
 Before:
-- Detailed design specs
-- All design iterations
-- Complete user research
+- User personas and journeys
+- Feature requirements (P0/P1/P2)
+- User research insights
 
 After:
-- Final design decisions + rationale
-- Design system reference
-- Acceptance criteria
-- Link to full design docs
+- **Risk analysis** (new - primary focus)
+- Assumption validation checklist
+- Mitigation strategies for top risks
+- Feature requirements (summarized, linked)
+- Go/no-go criteria
 
-### Operational Layer (20% → 60%)
+### Operational Layer (10% → 10%)
 Before:
-- Tech stack exploration
-- Architecture ideas
+- Tech stack considerations
+- Integration requirements
 
 After:
-- Full tech stack details
-- Code architecture and patterns
-- API specifications
-- Active development files
-- Implementation blockers
+- Technical validation needed (email deliverability, CRM API limits)
+- Proof-of-concept requirements
 ```
 
-**Step 3: Add New Phase Context (Day 2-3)**
+**Step 3: Add New Gate Context (Day 2-3)**
 
-Introduce phase-appropriate content:
+Introduce gate-appropriate content per [PAT-002](CONTEXT_PATTERNS.md#pat-002):
 
-**For Build Phase:**
-- Technical architecture
+**For v0.6 Architecture:**
+- Technical architecture and system design
+- Technology stack selection and rationale
+- Infrastructure and scalability plan
+- Integration patterns
+- Security and compliance requirements
+
+**For v0.7 Build Execution:**
+- Sprint/EPIC execution tracking
 - Code conventions and patterns
-- Development environment setup
-- Active sprint details
+- Active development files
 - Implementation blockers
+- Test coverage and technical debt
 
-**For Test Phase:**
-- Test strategy and coverage
-- QA environments
-- Known issues and bug priority
-- Go/no-go criteria
-- Performance benchmarks
-
-**For Launch Phase:**
-- Go-to-market plan
-- Marketing messaging
-- Launch checklist
-- Support readiness
-- Rollout strategy
+**For v0.9 Go-to-Market:**
+- Launch strategy and timeline
+- Marketing messaging and campaigns
+- Sales enablement materials
+- Customer support preparation
+- Analytics and feedback mechanisms
 
 **Step 4: Update Cross-Discipline References (Day 3-4)**
 
@@ -156,7 +159,7 @@ Run quality checks:
 ## Transition Quality Check
 
 ✅ Context Completeness:
-- [ ] New phase focus area has appropriate detail
+- [ ] New gate focus area has appropriate detail and deliverables
 - [ ] Previous phase summarized (not lost)
 - [ ] Strategic core maintained across transition
 - [ ] Cross-references updated
@@ -271,7 +274,7 @@ src/
 ```
 
 ### Related IDs
-- [PAT-002: Phase Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
+- [PAT-002: Gate Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
 - [PAT-004: Context Evolution Pattern](CONTEXT_PATTERNS.md#pat-004)
 - [MP-003: Progressive Evolution Principle](PRINCIPLES.md#mp-003)
 

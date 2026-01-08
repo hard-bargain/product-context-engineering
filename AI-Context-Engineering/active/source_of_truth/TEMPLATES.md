@@ -299,7 +299,7 @@ Active workflows running per customer (indicates value delivery)
 
 ### Related IDs
 - [PAT-001: Context Layer Pattern](CONTEXT_PATTERNS.md#pat-001)
-- [MP-001: Phase Alignment Principle](PRINCIPLES.md#mp-001)
+- [MP-001: Gate Alignment Principle](PRINCIPLES.md#mp-001)
 - [PJ-001: Strategist Journey](PRACTITIONER_JOURNEYS.md#pj-001)
 
 ---
@@ -308,13 +308,13 @@ Active workflows running per customer (indicates value delivery)
 
 **Status:** Active
 **Category:** Context Structure
-**Use Case:** Product managers orchestrating execution across phases
+**Use Case:** Product managers orchestrating execution across gates
 
 ### When to Use
-- Planning new product phase (Design, Build, Test, Launch)
-- Documenting feature requirements
+- Planning new product gate (v0.4 User Journeys, v0.7 Build, v0.9 GTM)
+- Documenting feature requirements and gate deliverables
 - Tracking cross-functional work
-- Phase transitions
+- Gate transitions
 
 ### Template
 
@@ -325,23 +325,23 @@ Active workflows running per customer (indicates value delivery)
 **Owner:** [Product Manager name]
 **Review Frequency:** Weekly during active development
 
-### Current Phase & Timeline
+### Current Gate & Timeline
 
-**Phase:** [Concept/Design/Build/Test/Launch/Scale]
+**Gate:** [v0.1 Spark / v0.2 Market Definition / v0.3 Commercial Model / v0.4 User Journeys / v0.5 Red Team / v0.6 Architecture / v0.7 Build / v0.8 Deployment / v0.9 GTM / v1.0 Adoption]
 **Start Date:** YYYY-MM-DD
 **Target Completion:** YYYY-MM-DD
 **Progress:** XX% complete
 
 **Sprint/Iteration:**
-- Current: Sprint XX
+- Current: Sprint XX (if in v0.7 Build)
 - Duration: [1 week / 2 weeks]
 - Velocity: XX points per sprint
 
-### Phase Objectives
+### Gate Objectives & Deliverables
 
 **Primary Goals:**
-1. [Objective 1 - measurable]
-2. [Objective 2 - measurable]
+1. [Objective 1 - gate-specific and measurable]
+2. [Objective 2 - aligned with gate deliverables]
 3. [Objective 3 - measurable]
 
 **Success Criteria:**
@@ -424,7 +424,7 @@ Active workflows running per customer (indicates value delivery)
 
 ### Metrics & Progress
 
-**Phase Metrics:**
+**Gate Metrics:**
 | Metric | Target | Current | Trend |
 |--------|--------|---------|-------|
 | [Metric 1] | XXX | XXX | ↑/↓/→ |
@@ -453,12 +453,12 @@ Active workflows running per customer (indicates value delivery)
 
 **Template Version:** 1.0
 **Maintainer:** Product Manager
-**Update Trigger:** Weekly during active phase
+**Update Trigger:** Weekly during active gate
 ```
 
 ### Related IDs
 - [PAT-001: Context Layer Pattern](CONTEXT_PATTERNS.md#pat-001)
-- [PAT-002: Phase Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
+- [PAT-002: Gate Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
 - [PJ-002: PM Journey](PRACTITIONER_JOURNEYS.md#pj-002)
 
 ---
@@ -705,7 +705,7 @@ npm run type-check   # TypeScript check
 
 ### Related IDs
 - [PAT-001: Context Layer Pattern](CONTEXT_PATTERNS.md#pat-001)
-- [PAT-002: Phase Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
+- [PAT-002: Gate Alignment Pattern](CONTEXT_PATTERNS.md#pat-002)
 - [PJ-004: Developer Journey](PRACTITIONER_JOURNEYS.md#pj-004)
 
 ---

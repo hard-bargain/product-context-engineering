@@ -191,161 +191,589 @@ We're building an automation platform to help SMBs compete with enterprises...
 **Applies To:** All disciplines
 
 ### Problem
-Context needs vary dramatically across product development phases. Early-phase context focuses on "what to build" while late-phase context focuses on "how to scale." Using same context structure across all phases creates friction and reduces AI effectiveness.
+Context needs vary dramatically across product development lifecycle gates. Early gates focus on "what to build and why" while later gates focus on "how to build and scale." Using same context structure across all gates creates friction and reduces AI effectiveness.
 
-### Solution: Phase-Aligned Context Structure
+### Solution: Gate-Aligned Context Structure
 
-Adapt context emphasis and detail based on product development phase:
+Adapt context emphasis and detail based on product development gate (following GHM 10-gate lifecycle):
 
-**Phase 1: Concept** (Weeks 1-4)
-- **Primary Layer**: Strategic (80%)
-- **Secondary Layer**: Tactical (20%)
-- **Operational**: Minimal
+**Quick Reference:**
+
+| Gate | Strategic | Tactical | Operational | Primary Focus |
+|------|-----------|----------|-------------|---------------|
+| **v0.1 Spark** | 90% | 10% | 0% | Problem/vision validation |
+| **v0.2 Market Definition** | 70% | 30% | 0% | Segments, TAM, ICP |
+| **v0.3 Commercial Model** | 60% | 40% | 0% | Pricing, positioning, moat |
+| **v0.4 User Journeys** | 30% | 60% | 10% | Personas, pain/value alignment |
+| **v0.5 Red Team Review** | 20% | 70% | 10% | Risk analysis, mitigation |
+| **v0.6 Architecture** | 10% | 40% | 50% | Tech stack, system design |
+| **v0.7 Build Execution** | 5% | 30% | 65% | Implementation, EPICs |
+| **v0.8 Deployment & Ops** | 5% | 40% | 55% | Infrastructure, monitoring |
+| **v0.9 Go-to-Market** | 35% | 50% | 15% | Launch campaigns, messaging |
+| **v1.0 Market Adoption** | 40% | 35% | 25% | Optimization, iteration |
+
+---
+
+### v0.1 Spark
+
+**Context Weights:**
+- **Strategic**: 90% (Primary)
+- **Tactical**: 10% (Minimal)
+- **Operational**: 0%
 
 **Focus:**
-- Market opportunity and validation
-- Customer pain points and needs
-- Competitive landscape
-- Business model hypotheses
-- Success metrics
+- Problem statement and validation
+- Product vision and mission
+- Initial market opportunity
+- Desired outcomes and success signals
+- Constraints and non-goals
+
+**AI Use Cases:**
+- Problem articulation refinement
+- Vision statement development
+- Opportunity validation
+- Constraint analysis
+
+**Example Context:**
+```markdown
+## v0.1 Spark Context
+
+### Strategic (90%)
+**Problem:** SMBs lose $50K/year on manual email workflows
+**Vision:** Enable SMBs to compete with enterprises through AI automation
+**Opportunity:** $10B market, 5M target SMBs in US
+**Hypothesis:** SMBs will pay for no-code automation that saves 10+ hrs/week
+
+### Tactical (10%)
+**Initial Scope Ideas:** Email automation + CRM integration
+**Success Signal:** 10 SMBs validate pain point in interviews
+```
+
+---
+
+### v0.2 Market Definition
+
+**Context Weights:**
+- **Strategic**: 70% (Primary)
+- **Tactical**: 30% (Secondary)
+- **Operational**: 0%
+
+**Focus:**
+- Market segmentation and sizing
+- Target customer segments (ICP)
+- Total Addressable Market (TAM)
+- Competitive landscape mapping
+- "Not for" statements
 
 **AI Use Cases:**
 - Market research synthesis
-- Customer interview analysis
-- Opportunity sizing
+- Segment analysis and prioritization
+- TAM/SAM/SOM calculation
 - Competitive positioning
 
-**Example Context Weight:**
+**Example Context:**
 ```markdown
-## Concept Phase Context
+## v0.2 Market Definition Context
 
-### Strategic (Primary) - 80%
-Vision: Enable SMBs to compete with enterprises through AI automation
-Market: $10B TAM, 5M target SMBs in US
-Hypothesis: SMBs will pay $100/user/month for no-code automation
+### Strategic (70%)
+**Target Segment:** US-based SMBs (10-100 employees) in professional services
+**TAM:** $10B (5M SMBs × $2K ACV)
+**SAM:** $2B (focus on tech-forward SMBs)
+**Competitors:** Zapier (workflow), HubSpot (email), Make (automation)
+**Differentiation:** AI-first, no-code, SMB-optimized
 
-### Tactical (Secondary) - 20%
-MVP Scope: Email automation + 2 CRM integrations
-Success Metric: 100 paying customers in 6 months
-
-### Operational - Minimal
-Tech stack exploration: React, Node.js, PostgreSQL
+### Tactical (30%)
+**ICP Criteria:**
+- Company size: 10-100 employees
+- Industry: Professional services, consulting, agencies
+- Pain: 20+ hours/week on manual workflows
+- Budget: $100-300/user/month
+**Not For:** Enterprises (too complex), solopreneurs (insufficient budget)
 ```
 
-**Phase 2: Design** (Weeks 5-12)
-- **Primary Layer**: Tactical (60%)
-- **Secondary Layer**: Strategic (25%) + Operational (15%)
+---
+
+### v0.3 Commercial Model
+
+**Context Weights:**
+- **Strategic**: 60% (Primary)
+- **Tactical**: 40% (Secondary)
+- **Operational**: 0%
 
 **Focus:**
-- User research and personas
-- Feature requirements and specs
-- Design mockups and prototypes
-- Information architecture
-- User flows
+- Monetization strategy and pricing model
+- Packaging and tiers
+- Competitive pricing analysis
+- Unit economics and margins
+- Strategic moat and defensibility
 
 **AI Use Cases:**
-- Design critique and suggestions
-- User flow optimization
-- Accessibility review
-- Copy and messaging refinement
+- Pricing strategy analysis
+- Competitive price comparison
+- Unit economics modeling
+- Monetization optimization
 
-**Phase 3: Build** (Weeks 13-24)
-- **Primary Layer**: Operational (60%)
-- **Secondary Layer**: Tactical (35%) + Strategic (5%)
+**Example Context:**
+```markdown
+## v0.3 Commercial Model Context
+
+### Strategic (60%)
+**Pricing Model:** Per-user SaaS subscription
+**Target Price:** $150/user/month (enterprise-grade value at SMB price)
+**Moat:** AI automation library + workflow templates + integrations
+**Unit Economics:**
+- LTV: $5,400 (36-month average)
+- CAC: $1,200
+- LTV:CAC = 4.5x
+
+### Tactical (40%)
+**Pricing Tiers:**
+- Starter: $99/user/mo (1 integration, 100 workflows/mo)
+- Professional: $199/user/mo (5 integrations, unlimited workflows)
+- Enterprise: Custom (SSO, advanced security, dedicated support)
+**Anchor Competitor:** HubSpot at $800/seat/mo (we're 75% cheaper)
+```
+
+---
+
+### v0.4 User Journeys
+
+**Context Weights:**
+- **Strategic**: 30% (Background)
+- **Tactical**: 60% (Primary)
+- **Operational**: 10% (Emerging)
 
 **Focus:**
-- Code architecture and implementation
+- User personas and archetypes
+- Journey maps and workflows
+- Pain points and value propositions
+- Feature requirements and priorities
+- User research insights
+
+**AI Use Cases:**
+- Journey map optimization
+- Persona refinement
+- Feature prioritization
+- User story generation
+
+**Example Context:**
+```markdown
+## v0.4 User Journeys Context
+
+### Strategic (30%)
+**Vision:** Enable SMBs to compete with enterprises
+**Target:** Professional services SMBs (10-100 employees)
+
+### Tactical (60%)
+**Primary Persona:** Operations Manager at 50-person consulting firm
+**Key Pain:** Spends 15 hours/week routing client emails manually
+**Jobs to be Done:**
+1. Automatically route client emails to right consultant
+2. Trigger follow-up workflows based on email content
+3. Update CRM with email interactions
+**Must-Have Features:**
+- Email parsing and routing (P0)
+- CRM integration - Salesforce/HubSpot (P0)
+- Workflow automation builder (P0)
+- Email templates and responses (P1)
+
+### Operational (10%)
+**Tech Stack Considerations:** Need email API, CRM connectors, workflow engine
+```
+
+---
+
+### v0.5 Red Team Review
+
+**Context Weights:**
+- **Strategic**: 20% (Background)
+- **Tactical**: 70% (Primary)
+- **Operational**: 10% (Technical validation)
+
+**Focus:**
+- Risk identification and assessment
+- Adversarial challenge to assumptions
+- Mitigation strategies and contingencies
+- Go/no-go decision criteria
+- Early warning signals
+
+**AI Use Cases:**
+- Risk scenario generation
+- Assumption challenge
+- Mitigation strategy development
+- Competitive response analysis
+
+**Example Context:**
+```markdown
+## v0.5 Red Team Review Context
+
+### Strategic (20%)
+**Vision Validation:** Confirmed - 50 SMBs validated pain point
+**Market Validation:** TAM/SAM sizing holds
+
+### Tactical (70%)
+**Key Risks:**
+1. **Email deliverability** (High) - ISPs may flag automated emails
+   - Mitigation: Partner with SendGrid/Postmark
+2. **CRM integration complexity** (Medium) - 20+ CRMs to support
+   - Mitigation: Start with top 3 (Salesforce, HubSpot, Pipedrive)
+3. **AI accuracy** (Medium) - Email routing errors frustrate users
+   - Mitigation: Human-in-loop review for first 30 days
+**Go/No-Go Criteria:**
+- Validated: 10+ SMBs commit to pilot ✅
+- Validated: Email deliverability > 95% in testing ✅
+- Risk: CRM integration timeline acceptable ✅
+**Decision:** GO - proceed to architecture
+
+### Operational (10%)
+**Technical Validation Needed:** Email parsing accuracy, CRM API limits
+```
+
+---
+
+### v0.6 Architecture
+
+**Context Weights:**
+- **Strategic**: 10% (Background)
+- **Tactical**: 40% (Requirements)
+- **Operational**: 50% (Primary)
+
+**Focus:**
+- Technical architecture and system design
+- Technology stack selection
+- Infrastructure and scalability
+- Integration patterns and APIs
+- Security and compliance requirements
+
+**AI Use Cases:**
+- Architecture pattern recommendations
+- Tech stack trade-off analysis
+- Scalability assessment
+- Security review
+
+**Example Context:**
+```markdown
+## v0.6 Architecture Context
+
+### Strategic (10%)
+**Market:** SMBs, professional services
+**Scale Target:** 10K customers, 100K users by year 2
+
+### Tactical (40%)
+**Must-Have Features:**
+- Email parsing/routing
+- Workflow automation
+- CRM integrations (Salesforce, HubSpot, Pipedrive)
+**Non-Functional Requirements:**
+- Email processing: < 30 seconds
+- Uptime: 99.9%
+- Data residency: US-only option for compliance
+
+### Operational (50%)
+**Tech Stack:**
+- **Frontend:** React + TypeScript, Next.js
+- **Backend:** Node.js + Express, Python (ML services)
+- **Database:** PostgreSQL (structured), Redis (cache)
+- **Queue:** BullMQ for email processing
+- **ML:** OpenAI API for email parsing
+- **Infrastructure:** AWS (ECS, RDS, SQS, S3)
+**Architecture:**
+- Microservices: API service, Email processor, Workflow engine, Integration service
+- Event-driven: SQS for async processing
+- Security: OAuth 2.0, encryption at rest/transit, SOC 2 compliance path
+**Key Design Decisions:**
+- Multi-tenant DB with row-level security
+- Serverless email processing (cost optimization)
+- API-first design for future integrations
+```
+
+---
+
+### v0.7 Build Execution
+
+**Context Weights:**
+- **Strategic**: 5% (Background)
+- **Tactical**: 30% (Sprint planning)
+- **Operational**: 65% (Primary)
+
+**Focus:**
+- Sprint/EPIC execution and tracking
+- Code implementation and patterns
 - API design and integration
-- Database schema and queries
+- Database schemas and queries
 - Testing and quality assurance
-- Bug fixes and refinements
+- Bug fixes and technical debt
 
 **AI Use Cases:**
 - Code generation and review
 - Debugging and troubleshooting
 - Test case generation
 - Documentation creation
+- Refactoring suggestions
 
-**Phase 4: Test** (Weeks 25-28)
-- **Primary Layer**: Operational (50%) + Tactical (50%)
+**Example Context:**
+```markdown
+## v0.7 Build Execution Context
+
+### Strategic (5%)
+**Vision:** AI automation for SMBs
+**Deadline:** v1.0 launch in 12 weeks
+
+### Tactical (30%)
+**Current Sprint:** Sprint 8 of 12
+**Sprint Goal:** Complete CRM integration for HubSpot
+**Must-Complete:**
+- Email routing engine (EPIC-002) - 90% done
+- HubSpot integration (EPIC-003) - current sprint
+- Workflow builder UI (EPIC-004) - next sprint
+**Blockers:**
+- HubSpot API rate limits - need caching strategy
+
+### Operational (65%)
+**Active Files:**
+- `src/integrations/hubspot/client.ts` - HubSpot API client
+- `src/integrations/hubspot/sync.ts` - Contact sync logic
+- `src/services/workflow/engine.ts` - Workflow execution engine
+**Code Patterns:**
+- Repository pattern for data access
+- Factory pattern for integration clients
+- Strategy pattern for routing rules
+**Current Task:** Implement HubSpot contact sync with rate limit handling
+**Tech Debt:** Email parser needs refactoring (monolithic, 500 lines)
+**Test Coverage:** 78% (target: 80%)
+```
+
+---
+
+### v0.8 Deployment & Ops
+
+**Context Weights:**
+- **Strategic**: 5% (Background)
+- **Tactical**: 40% (Deployment planning)
+- **Operational**: 55% (Primary)
 
 **Focus:**
-- Test plans and cases
-- Quality assurance results
-- Bug reports and prioritization
-- Performance and security testing
-- User acceptance testing
+- Deployment strategy and infrastructure
+- Monitoring and observability
+- Incident response and runbooks
+- Performance optimization
+- Security hardening
+- Operational procedures
 
 **AI Use Cases:**
-- Test case generation
-- Bug reproduction and analysis
-- Performance optimization
-- Security vulnerability assessment
+- Runbook generation
+- Monitoring alert configuration
+- Performance optimization suggestions
+- Incident response assistance
+- Infrastructure-as-code review
 
-**Phase 5: Launch** (Weeks 29-32)
-- **Primary Layer**: Tactical (55%)
-- **Secondary Layer**: Strategic (30%) + Operational (15%)
+**Example Context:**
+```markdown
+## v0.8 Deployment & Ops Context
+
+### Strategic (5%)
+**Target:** 10K customers, 99.9% uptime
+
+### Tactical (40%)
+**Deployment Plan:**
+- Soft launch: 50 beta customers (Week 1-2)
+- Gradual rollout: 10% → 50% → 100% (Week 3-4)
+- Rollback triggers: Error rate > 1%, latency > 2s
+**Launch Readiness:**
+- Infrastructure: AWS production environment ✅
+- Monitoring: DataDog dashboards ✅
+- Security: Penetration testing complete ✅
+- Documentation: API docs, runbooks ✅
+
+### Operational (55%)
+**Infrastructure:**
+- **Production:** us-east-1 (primary), us-west-2 (failover)
+- **Scaling:** Auto-scaling ECS (2-20 containers)
+- **Database:** RDS PostgreSQL with read replicas
+- **Monitoring:** DataDog (APM, logs, metrics)
+**Runbooks:**
+- High email processing latency → Scale email processor workers
+- Database connection exhaustion → Check connection pool settings
+- CRM API failures → Check rate limits, retry with backoff
+**SLOs:**
+- Availability: 99.9% (43 min downtime/month)
+- Email processing latency: p95 < 30s
+- API response time: p95 < 500ms
+**On-Call:** PagerDuty rotation, 15-min response SLA
+```
+
+---
+
+### v0.9 Go-to-Market
+
+**Context Weights:**
+- **Strategic**: 35% (Positioning)
+- **Tactical**: 50% (Primary - campaigns)
+- **Operational**: 15% (Implementation)
 
 **Focus:**
-- Go-to-market strategy
+- Launch strategy and execution
 - Marketing messaging and campaigns
-- Launch checklists and coordination
+- Sales enablement and processes
 - Customer support preparation
-- Metrics and monitoring
+- Analytics and tracking setup
+- Feedback collection mechanisms
 
 **AI Use Cases:**
 - Marketing copy generation
-- Launch plan review
+- Campaign strategy development
+- Sales pitch refinement
 - Support documentation creation
-- Metrics dashboard design
+- Customer communication templates
 
-**Phase 6: Scale** (Weeks 33+)
-- **Balanced**: Strategic (40%) + Tactical (35%) + Operational (25%)
+**Example Context:**
+```markdown
+## v0.9 Go-to-Market Context
+
+### Strategic (35%)
+**Positioning:** Enterprise-grade AI automation at SMB prices
+**Target:** Operations Managers at 50-100 person professional services firms
+**Differentiation:**
+- AI-first (vs. rule-based: Zapier)
+- SMB-optimized (vs. enterprise complexity: HubSpot)
+- No-code (vs. developer-required: Make)
+
+### Tactical (50%)
+**Launch Timeline:**
+- Week 1: Soft launch to 50 beta customers
+- Week 2: PR campaign (TechCrunch, Product Hunt)
+- Week 3: Paid acquisition starts ($50K budget)
+- Week 4: Partner announcements (integrations)
+**Marketing Campaigns:**
+1. **Content:** "Email Automation ROI Calculator" lead magnet
+2. **Paid:** Google Ads ("email automation for SMBs")
+3. **Social:** LinkedIn thought leadership (operations managers)
+4. **Email:** Drip campaign for trial signups (7-day onboarding)
+**Messaging:**
+- Headline: "Stop Losing 15 Hours/Week on Email Workflows"
+- Value Props: AI automation, 10-min setup, $150/user vs. $800 alternatives
+**Sales Process:**
+- Self-serve trial (14 days)
+- Sales assist for 10+ seat deals
+- Customer success onboarding call (week 1)
+
+### Operational (15%)
+**Implementation:**
+- Analytics: Mixpanel events (signup, activation, retention)
+- Support: Intercom chat, email support@
+- Documentation: Help center (50 articles ready)
+**Launch Checklist:**
+- Marketing site live ✅
+- Trial signup flow tested ✅
+- Email campaigns scheduled ✅
+- Support team trained ✅
+```
+
+---
+
+### v1.0 Market Adoption
+
+**Context Weights:**
+- **Strategic**: 40% (Optimization)
+- **Tactical**: 35% (Iteration)
+- **Operational**: 25% (Improvements)
 
 **Focus:**
-- Growth and optimization
-- Feature iteration based on data
-- Infrastructure scaling
-- Team and process scaling
-- Strategic pivots and adjustments
+- Adoption metrics and analysis
+- Customer feedback and insights
+- Feature optimization and iteration
+- Growth and scaling strategies
+- Retention and churn analysis
+- Strategic pivots based on data
 
 **AI Use Cases:**
 - Data analysis and insights
+- Customer feedback synthesis
 - Feature prioritization
-- Performance optimization
-- Process improvement suggestions
+- Optimization recommendations
+- Churn prediction and prevention
+
+**Example Context:**
+```markdown
+## v1.0 Market Adoption Context
+
+### Strategic (40%)
+**Performance vs. Targets:**
+- Target: 100 customers by Month 6
+- Actual: 127 customers ✅ (27% ahead)
+- Churn: 8% (target: 10%) ✅
+**Strategic Insights:**
+- Professional services love it (90% of customers)
+- Agencies struggling with complexity (source of churn)
+- Enterprise interest emerging (5 inbound requests)
+**Strategic Decisions:**
+- Double down on professional services vertical
+- Simplify workflow builder for agencies
+- Explore enterprise tier (v1.1)
+
+### Tactical (35%)
+**Key Metrics:**
+- MRR: $38K (growing 15%/mo)
+- CAC: $1,100 (target: $1,200) ✅
+- LTV: $6,200 (up from $5,400 projection) ✅
+- Activation: 68% (users who send first workflow)
+- Feature adoption: Email routing (95%), CRM sync (72%), workflow builder (45%)
+**Optimization Priorities:**
+1. Increase workflow builder adoption 45% → 65% (biggest value driver)
+2. Improve onboarding (activation 68% → 80%)
+3. Add Pipedrive integration (top request)
+**Customer Feedback Themes:**
+- "Love it" (78%): Email routing accuracy, time savings
+- "Frustrating" (22%): Workflow builder learning curve, limited templates
+
+### Operational (25%)
+**Technical Performance:**
+- Uptime: 99.94% ✅
+- Email processing latency: p95 = 18s ✅ (target: 30s)
+- Support tickets: 45/week (mostly onboarding questions)
+**Engineering Focus:**
+- Workflow builder UX improvements (EPIC-012)
+- Workflow template library (EPIC-013)
+- Pipedrive integration (EPIC-014)
+**Technical Debt:**
+- Email parser refactoring (carried from v0.7) - prioritize in Q2
+```
+
+---
 
 ### Usage Guidelines
 
-**Phase Transitions:**
+**Gate Transitions:**
 
-When moving between phases, update context weights gradually:
+When moving between gates, update context weights gradually over 1-2 weeks:
 
 ```markdown
-## Phase Transition: Design → Build
+## Gate Transition Example: v0.6 Architecture → v0.7 Build
 
-**Week 12 (Late Design)**
-- Strategic: 20%
-- Tactical: 60%
-- Operational: 20%
-
-**Week 13 (Early Build)**
+**Week 1 (Late v0.6)**
 - Strategic: 10%
 - Tactical: 40%
 - Operational: 50%
 
-**Week 14 (Full Build)**
-- Strategic: 5%
+**Week 2 (Early v0.7)**
+- Strategic: 7%
 - Tactical: 35%
-- Operational: 60%
+- Operational: 58%
+
+**Week 3 (Full v0.7)**
+- Strategic: 5%
+- Tactical: 30%
+- Operational: 65%
 ```
 
 **Anti-Patterns:**
 
-❌ **Static Context**: Same context structure used across all phases
-❌ **Premature Detail**: Operational context in Concept phase
-❌ **Lost Strategy**: No strategic context in Build/Test phases
-❌ **Abrupt Transitions**: Switching from 80% strategic to 80% operational overnight
+❌ **Static Context**: Same context structure used across all gates
+❌ **Skipping Strategic Gates**: Jumping from Spark (v0.1) directly to Architecture (v0.6)
+❌ **Premature Detail**: Operational context in Market Definition (v0.2)
+❌ **Lost Strategy**: No strategic context in Build/Deployment gates
+❌ **Abrupt Transitions**: Switching from 90% strategic to 65% operational overnight
+❌ **Missing Commercial Validation**: Skipping v0.2 Market Definition or v0.3 Commercial Model
 
 ### Related IDs
 - [PAT-001: Context Layer Pattern](#pat-001) - Three-layer architecture
