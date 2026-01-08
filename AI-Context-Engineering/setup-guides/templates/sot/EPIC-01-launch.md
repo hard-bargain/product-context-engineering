@@ -1,8 +1,14 @@
-# EPIC-01: Launch Execution
+# EPIC-01: Launch Execution (Gates v0.8-v0.9-v1.0)
 
 **EPIC Owner:** [PM/Launch Manager Name]
 **Status:** 🔄 In Progress
 **Timeline:** [Start Date] → [Target Launch Date]
+
+**⚠️ NOTE**: ACE uses 10 gates. "Launch" spans v0.8 (Deployment), v0.9 (GTM), and v1.0 (Adoption).
+Consider creating separate EPICs for each gate if timelines are distinct.
+- EPIC-01a: v0.8 Deployment & Ops (Issues 1-15)
+- EPIC-01b: v0.9 Go-to-Market (Issues 16-35)
+- EPIC-01c: v1.0 Market Adoption (Issues 36-40)
 **Team:** ~30 people across 5 functions
 
 ---

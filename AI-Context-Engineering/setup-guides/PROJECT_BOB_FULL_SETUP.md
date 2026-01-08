@@ -1,8 +1,15 @@
-# ACE + SoT Full Setup Guide for Project Bob (Launch Phase)
+# ACE + SoT Full Setup Guide for Project Bob (Launch Gates: v0.8-v1.0)
 
-**Version:** 1.0
+**Version:** 1.1
 **Target Tool:** Project Bob (AI-enabled IDE)
-**Product Phase:** Launch
+**Product Gates:** v0.8 Deployment & Ops / v0.9 Go-to-Market / v1.0 Market Adoption
+
+**⚠️ IMPORTANT**: ACE now uses a 10-gate lifecycle. "Launch" spans three gates:
+- **v0.8 Deployment & Ops** (Strategic 5%, Tactical 40%, Operational 55%)
+- **v0.9 Go-to-Market** (Strategic 35%, Tactical 50%, Operational 15%)
+- **v1.0 Market Adoption** (Strategic 40%, Tactical 35%, Operational 25%)
+
+See [MIGRATION_NOTE.md](./MIGRATION_NOTE.md) for guidance on identifying your actual gate.
 **Team Size:** Medium to Large (10-50 people)
 **Setup Time:** 2-4 hours (one-time)
 **Approach:** Full GHM-M SoT structure for products
